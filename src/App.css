@@ -1,38 +1,166 @@
-.App {
+/* <---------------------------------- FONTS ----------------------------------> */
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter24pt-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter24pt-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* <----------------------------------------------- ROOTS -----------------------------------------------> */
+:root{
+  --color-light: #FFFFFF;
+  --color-dark: #000000 ;
+  --color-gray: #F9F8FE ;
+  --color-gray-txt: #676767 ;
+
+  --radius: 8px;
+
+  --font-family-accent: 'Inter', 'sans-serif';
+  --font-family-title: 'Montserrat', 'sans-serif';
+  --font-family-base: 'Poppins', 'sans-serif';
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 1440px;
+}
+.header {
+  width: 1440px;
+  height: 68px;
+  background-color: var(--color-light);
+  position: absolute;
+  z-index: 9;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header__left {
+  display: flex;
+  gap: 32px;
+  width: 968px;
+  height: 19px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header__left_btn {
+  color: var(--color-dark);
+  background-color: #fff;
+  font-family: var(--font-family-accent);
+  font-size: 16px;
+  font-weight: 400;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header__right {
+  display: flex;
+  justify-content: flex-end;
+  width: 224px;
+}
+.header__right_btn{
+  border-radius: var(--radius);
+  padding: 8px 24px;
+  height: 40px;
+  font-family: var(--font-family-accent);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  cursor: pointer;
+}
+.section-1 {
+  background-color: var(--color-light);
+}
+.section-1__img {
+  width: 100%;
+}
+.section-1__botom {
+  width: 1280px;
+  height: 151px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.section-1__left {
+  width: 600px;
+  font-family: var(--font-family-title);
+  font-size: 52px;
+  font-weight: 700;
+}
+.section-1__right {
+  width: 600px;
+  height: 118px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 24px;
 }
-
-.App-link {
-  color: #61dafb;
+.section-1__right_desc {
+  width: 560px;
+  height: 54px;
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  font-weight: 400;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section-1__right_btn {
+  display: flex;
+  gap: 11px;
+}
+.section-1_btn {
+  width: 100px;
+  height: 40px;
+  border-radius: var(--radius);
+  border: 1px solid black;
+  background-color: var(--color-light);
+  cursor: pointer;
+  color: var(--color-dark);
+  font-family: var(--font-family-accent);
+  font-size: 14px;
+  font-weight: 600;
+}
+.section-1_btn:hover {
+  transition: ease 0.5s;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+.section-2{
+}
+.section-2_img{
+  width: 100%;
 }
