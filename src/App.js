@@ -65,7 +65,7 @@ function App() {
             </div>
             <div className='hero__action'>
               <button className='hero__btn'>Learn more</button>
-              <button className='arrow hero__btn'>Sign Up {'>'}</button>
+              <button className='hero__btn__arrow'>Sign Up {'>'}</button>
             </div>
           </div>
             <div className='hero_img'>
@@ -115,7 +115,7 @@ function App() {
           </div>
           <div className='hub_btns'>
             <button className='btn hub__btn'>Join</button>
-            <button className='arrow hub__btn'>Learn more {'>'}</button>
+            <button className='hub__btn__arrow'>Learn more {'>'}</button>
           </div>
         </section>
         <section className='intro'>
