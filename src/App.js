@@ -142,6 +142,43 @@ function App() {
           </div>
           <img className='intro__img' src='img/img4.jpg' alt='cyclist' />
         </section>
+        <section class='benefits'>
+          <h2 class='benefits__header'>
+            Discover a World of Inspiration and Resources on LifeBlend Hub
+          </h2>
+          <div class='benefits__cards'>
+            <div class='benefits__card'>
+              <img class='benefits__img' src='img/img5-1.jpg' alt='img5' />
+              <h4 class='benefits__title'>
+                Unlock Your Full Potential with LifeBlend Hub's Comprehensive Content
+              </h4>
+              <p class='benefits__desc'>
+                Engage with our curated content and resources to enhance every aspect of your lifestyle.
+              </p>
+              <button class='benefits__btn_arrow'>Explore <span>{'>'}</span></button>
+            </div>
+            <div class='benefits__card'>
+              <img class='benefits__img' src='img/img5-2.jpg' alt='img5' />
+              <h4 class='benefits__title'>
+                Stay Informed and Inspired with LifeBlend Hub's Diverse Content Content
+              </h4>
+              <p class='benefits__desc'>
+                Access our extensive collection of articles, videos, and guides to enrich your daily life.
+              </p>
+              <button class='benefits__btn_arrow'>Discover <span>{'>'}</span></button>
+            </div>
+            <div class='benefits__card'>
+              <img class='benefits__img' src='img/img5-3.jpg' alt='img5' />
+              <h4 class='benefits__title'>
+                Transform Your Lifestyle with LifeBlend Hub's Expertly Curated Resources
+              </h4>
+              <p class='benefits__desc'>
+                Find the tools and resources you need to achieve your goals and live your best life.
+              </p>
+              <button class='benefits__btn_arrow'>Get Started<span>{'>'}</span></button>
+            </div>
+          </div>
+        </section>
       </main>
     <footer></footer>
     </div>
