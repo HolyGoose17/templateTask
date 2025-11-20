@@ -35,15 +35,15 @@ function App() {
         <section className='hero'>
           <div className='hero__content'>
             <div className='hero__lifeStyle'>
-              <div className='hero__moto'>
+              <h4 className='hero__moto'>
                 Revolutionize
-              </div>
+              </h4>
               <h2 className='hero__title'>
                 Discover a New Way of Living
               </h2>
-              <div className='hero__desc'>
+              <p className='hero__desc'>
                 LifeBlend Hub offers a unique and comprehensive approach to modern living. With a curated blend of content and resources, we aim to enhance and inspire every facet of your lifestyle.
-              </div>
+              </p>
             </div>
             <div className='hero__features'>
               <div className='hero__feature'> 
@@ -72,51 +72,75 @@ function App() {
               <img src='img/img2.jpg' alt='img2'></img>
             </div>
         </section>
-        <section class='hub'>
-          <div class='hub__content'>
-            <div class='hub__moto'>
+        <section className='hub'>
+          <div className='hub__content'>
+            <h4 className='hub__moto'>
               Discover
-            </div>
-            <div class='hub__head'>
+            </h4>
+            <h2 className='hub__head'>
               Unlock the Power of LifeBlend Hub
-            </div>
-            <div class='hub__body'>
+            </h2>
+            <p className='hub__body'>
               LifeBlend Hub is your one-stop destination for all things related to health, productivity, leisure, and personal growth. Explore our comprehensive blend of content and resources to enhance and inspire every facet of your lifestyle.
-            </div>
+            </p>
           </div>
-          <div class='hub__cards'>
-            <div class='hub__card'>
+          <div className='hub__cards'>
+            <div className='hub__card'>
               <img className='hub__img' src='img/img3-1.jpg' alt='img2-1'></img>
-              <h2 class='hub__title'>
+              <h2 className='hub__title'>
                 Health and Wellness
               </h2>
-              <p class='hub__desc'>
+              <p className='hub__desc'>
                 Discover expert advice and tips on maintaining a healthy lifestyle.
               </p>
             </div>
-            <div class='hub__card'>
+            <div className='hub__card'>
               <img className='hub__img' src='img/img3-2.jpg' alt='img3-2'></img>
-              <h2 class='hub__title'>
+              <h2 className='hub__title'>
                 Boost Your Productivity
               </h2>
-              <p class='hub__desc'>
+              <p className='hub__desc'>
                 Learn effective strategies to maximize your productivity and achieve your goals.
               </p>
             </div>
-            <div class='hub__card'>
+            <div className='hub__card'>
               <img className='hub__img' src='img/img3-3.jpg' alt='img3-3'></img>
-              <h2 class='hub__title'>
+              <h2 className='hub__title'>
                 Find Joy in Leisure
               </h2>
-              <p class='hub__desc'>
+              <p className='hub__desc'>
                 Discover exciting activities and hobbies to make the most of your leisure time.
               </p>
             </div>
           </div>
-          <div class='hub_btns'>
-            <button class='hub__btn'>Join</button>
-            <button class='hub__btn_arrow'>Learn more {'>'}</button>
+          <div className='hub_btns'>
+            <button className='btn hub__btn'>Join</button>
+            <button className='arrow hub__btn'>Learn more {'>'}</button>
           </div>
+        </section>
+        <section className='intro'>
+          <div className='intro__container'>
+            <div className='intro__text'>
+              <h4 className='intro__moto'>
+                Discover
+              </h4>
+              <h2 className='intro__title'>
+                Unlock the Secrets to a Balanced Lifestyle
+              </h2>
+              <p className='intro__desc'>
+                LifeBlend Hub provides a comprehensive blend of content and resources to help you achieve balance in every aspect of your life. From wellness tips and personal development strategies to home organization hacks and travel inspiration, we've got you covered.
+              </p>
+            </div>
+            <div className='intro__btns'>
+              <button className='btn intro__btn'>
+                Learn more
+              </button>
+              <button className='arrow intro__btn'>
+                Sign Up{'>'}
+              </button>
+            </div>
+          </div>
+          <img className='intro__img' src='img/img14.jpg' alt='cyclist'></img>
         </section>
       </main>
     <footer></footer>
