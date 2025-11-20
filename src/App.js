@@ -64,10 +64,8 @@ function App() {
               </div>
             </div>
             <div className='hero__action'>
-              <button className='hero__btn btn'>Learn more</button>
-              <div>
-                <button className='hero__btn'>Sign Up <span className='hero__btn arrow'>{'>'}</span></button>
-              </div>
+              <button className='hero__btn'>Learn more</button>
+              <button className='arrow hero__btn'>Sign Up {'>'}</button>
             </div>
           </div>
             <div className='hero_img'>
@@ -79,43 +77,46 @@ function App() {
             <div class='hub__moto'>
               Discover
             </div>
-            <div class='hub__title'>
+            <div class='hub__head'>
               Unlock the Power of LifeBlend Hub
             </div>
-            <div class='hub__desc'>
+            <div class='hub__body'>
               LifeBlend Hub is your one-stop destination for all things related to health, productivity, leisure, and personal growth. Explore our comprehensive blend of content and resources to enhance and inspire every facet of your lifestyle.
             </div>
           </div>
           <div class='hub__cards'>
-            <div class='hub__health'>
-              <img class='' src='' alt=''></img>
-              <h2>
+            <div class='hub__card'>
+              <img className='hub__img' src='img/img3-1.jpg' alt='img2-1'></img>
+              <h2 class='hub__title'>
                 Health and Wellness
               </h2>
-              <p>
+              <p class='hub__desc'>
                 Discover expert advice and tips on maintaining a healthy lifestyle.
               </p>
             </div>
-            <div class='hub__prod'>
-              <img class='' src='' alt=''></img>
-              <h2>
+            <div class='hub__card'>
+              <img className='hub__img' src='img/img3-2.jpg' alt='img3-2'></img>
+              <h2 class='hub__title'>
                 Boost Your Productivity
               </h2>
-              <p>
+              <p class='hub__desc'>
                 Learn effective strategies to maximize your productivity and achieve your goals.
               </p>
             </div>
-            <div class='hub__joy'>
-              <img class='' src='' alt=''></img>
-              <h2>
+            <div class='hub__card'>
+              <img className='hub__img' src='img/img3-3.jpg' alt='img3-3'></img>
+              <h2 class='hub__title'>
                 Find Joy in Leisure
               </h2>
-              <p>
+              <p class='hub__desc'>
                 Discover exciting activities and hobbies to make the most of your leisure time.
               </p>
             </div>
           </div>
-          <div class='hub_btns'></div>
+          <div class='hub_btns'>
+            <button class='hub__btn'>Join</button>
+            <button class='hub__btn_arrow'>Learn more {'>'}</button>
+          </div>
         </section>
       </main>
     <footer></footer>
