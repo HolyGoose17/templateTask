@@ -135,12 +135,12 @@ function App() {
               <button className='btn intro__btn'>
                 Learn more
               </button>
-              <button className='arrow intro__btn'>
-                Sign Up{'>'}
+              <button className='intro__btn_arrow'>
+                Sign Up<span>{'>'}</span>
               </button>
             </div>
           </div>
-          <img className='intro__img' src='img/img14.jpg' alt='cyclist'></img>
+          <img className='intro__img' src='img/img4.jpg' alt='cyclist' />
         </section>
       </main>
     <footer></footer>
