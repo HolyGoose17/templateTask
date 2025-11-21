@@ -179,58 +179,61 @@ function App() {
             </div>
           </div>
         </section>
-        <section class='proof'>
-          <div class='proof__content'>
-            <div class='proof__head'>
-              <h2 class='proof__title'>
+        <section className='proof'>
+          <div className='proof__content'>
+            <div className='proof__head'>
+              <h2 className='proof__title'>
                 Discover the Impact of LifeBlend Hub with These Fascinating Statistics
               </h2>
-              <p class='proof__desc'>
+              <p className='proof__desc'>
                 LifeBlend Hub has reached millions of users worldwide, providing valuable resources and inspiring content to enhance their modern lifestyles.
               </p>
             </div>
-            <div class='proof__stats'>
-              <div class='proof__card'>
-                <h2 class='proof__percent'>
+            <div className='proof__stats'>
+              <div className='proof__card'>
+                <h2 className='proof__percent'>
                   50%
                 </h2>
-                <p class='proof__details'>
+                <p className='proof__details'>
                   Users report improved well-being and satisfaction with LifeBlend Hub.
                 </p>
               </div>
-              <div class='proof__card'>
-                <h2 class='proof__percent'>
+              <div className='proof__card'>
+                <h2 className='proof__percent'>
                   50%
                 </h2>
-                <p class='proof__details'>
+                <p className='proof__details'>
                   LifeBlend Hub has become an essential part of users' lives.
                 </p>
               </div>
             </div>
             <div className='proof__nav'>
-              <button class='proof__btn'>
+              <button className='proof__btn'>
                 Learn more
               </button>
-              <button class='proof__btn__arrow'>
+              <button className='proof__btn__arrow'>
                 Sign Up
                 <span>{'>'}</span>
               </button>
             </div>
           </div>
-          <img class='proof__img' src='img/img6.jpg' alt='runners' />
+          <img className='proof__img' src='img/img6.jpg' alt='runners' />
         </section>
-        <section class='newsletter'>
-          <div class='newsletter__text'>
-            <h2 class='newsletter__title'>Get the Latest LifeBlend Updates</h2>
-            <p class='newsletter__desc'>Subscribe to our newsletter for regular updates on lifestyle trends and tips.</p>
+        <section className='newsletter'>
+          <div className='newsletter__text'>
+            <h2 className='newsletter__title'>Get the Latest LifeBlend Updates</h2>
+            <p className='newsletter__desc'>Subscribe to our newsletter for regular updates on lifestyle trends and tips.</p>
           </div>
-          <div class='newsletter__form'>
-            <div class='newsletter__nav'>
-              <input class='newsletter__inp' type='email' placeholder='Enter your email' name='email' />
-              <button class='newsletter__btn'>Sign in</button>
+          <div className='newsletter__form'>
+            <div className='newsletter__nav'>
+              <input className='newsletter__inp' type='email' placeholder='Enter your email' name='email' />
+              <button className='newsletter__btn'>Sign in</button>
             </div>
-            <p class='newsletter__details'>By clicking Sign Up, you agree to our Terms and Conditions.</p>
+            <p className='newsletter__details'>By clicking Sign Up, you agree to our Terms and Conditions.</p>
           </div>
+        </section>
+        <section className='contract'>
+
         </section>
       </main>
     <footer></footer>
