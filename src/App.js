@@ -207,7 +207,7 @@ function App() {
                 </p>
               </div>
             </div>
-            <div>
+            <div className='proof__nav'>
               <button class='proof__btn'>
                 Learn more
               </button>

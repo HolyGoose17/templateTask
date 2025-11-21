@@ -75,15 +75,6 @@
   border-radius: var(--radius);
   border: 1px solid black;
 }
-/* .arrow {
-  width: 5.5rem;
-  border: 0 solid;
-  display: flex;
-}
-.arrow:hover {
-  background-color: var(--color-gray);
-  color: var(--color-dark);
-} */
 .header {
   width: 90rem;
   height: 4.25rem;
@@ -285,7 +276,7 @@
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 100%;
-  width: 7rem;
+  /* width: 7rem; */
   height: 2.5rem;
   padding: 0.5rem;
   background-color: var(--color-gray);
@@ -385,7 +376,7 @@
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 100%;
-  width: 7rem;
+  /* width: 7rem; */
   height: 2.5rem;
   background-color: var(--color-light);
   cursor: pointer;
@@ -451,7 +442,7 @@
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 100%;
-  width: 5.5rem;
+  /* width: 5.5rem; */
   height: 2.5rem;
   background-color: var(--color-gray);
   cursor: pointer;
@@ -520,8 +511,14 @@
   background-color: var(--color-gray);
 }
 .proof__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 .proof__head {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
 }
 .proof__title {
   font-family: var(--font-family-title);
@@ -536,8 +533,13 @@
   line-height: 160%;
 }
 .proof__stats {
+  display: flex;
+  gap: 1rem;
 }
 .proof__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .proof__percent {
   font-family: var(--font-family-base);
@@ -551,17 +553,35 @@
   font-weight: 400;
   line-height: 160%;
 }
+.proof__nav{
+  display: flex;
+  gap: 1rem;
+}
 .proof__btn {
+  width: 7.8125rem;
+  height: 2.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-dark);
+  background-color: var(--color-gray);
   font-family: var(--font-family-accent);
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 100%;
+  cursor: pointer;
+}
+.proof__btn:hover{
+  transition: ease 0.8s;
+  background-color: var(--color-dark);
+  color: var(--color-light);
 }
 .proof__btn__arrow {
+  height: 2.5rem;
+  background-color: var(--color-gray);
   font-family: var(--font-family-accent);
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 100%;
+  cursor: pointer;
 }
 .proof__img {
   width: 37.5rem;
