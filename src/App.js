@@ -19,7 +19,7 @@ function App() {
           <img className='welcome__img' src='img/img1.jpg' alt='img1' />
           <div className='welcome__content'>
             <h2 className='welcome__title'>
-              Stay tuned,<br></br> stay healthy
+              Stay tuned,<br/> stay healthy
             </h2>
             <div className='welcome__info'>
               <p className='welcome__description'>
@@ -144,7 +144,7 @@ function App() {
         </section>
         <section className='benefits'>
           <h2 className='benefits__header'>
-            Discover a World of Inspiration and Resources on LifeBlend Hub
+            Discover a World of Inspiration and<br/> Resources on LifeBlend Hub
           </h2>
           <div className='benefits__cards'>
             <div className='benefits__card'>
@@ -218,6 +218,19 @@ function App() {
             </div>
           </div>
           <img class='proof__img' src='img/img6.jpg' alt='runners' />
+        </section>
+        <section class='newsletter'>
+          <div class='newsletter__text'>
+            <h2 class='newsletter__title'>Get the Latest LifeBlend Updates</h2>
+            <p class='newsletter__desc'>Subscribe to our newsletter for regular updates on lifestyle trends and tips.</p>
+          </div>
+          <div class='newsletter__form'>
+            <div class='newsletter__nav'>
+              <input class='newsletter__inp' type='email' placeholder='Enter your email' name='email' />
+              <button class='newsletter__btn'>Sign in</button>
+            </div>
+            <p class='newsletter__details'>By clicking Sign Up, you agree to our Terms and Conditions.</p>
+          </div>
         </section>
       </main>
     <footer></footer>
