@@ -16,7 +16,7 @@ function App() {
       </header>
       <main className='main'>
         <section className='welcome'>
-          <img className='welcome__img' src='img/img1.jpg' alt='img1'></img>
+          <img className='welcome__img' src='img/img1.jpg' alt='img1' />
           <div className='welcome__content'>
             <h2 className='welcome__title'>
               Stay tuned,<br></br> stay healthy
@@ -69,7 +69,7 @@ function App() {
             </div>
           </div>
             <div className='hero_img'>
-              <img src='img/img2.jpg' alt='img2'></img>
+              <img src='img/img2.jpg' alt='img2' />
             </div>
         </section>
         <section className='hub'>
@@ -86,7 +86,7 @@ function App() {
           </div>
           <div className='hub__cards'>
             <div className='hub__card'>
-              <img className='hub__img' src='img/img3-1.jpg' alt='img2-1'></img>
+              <img className='hub__img' src='img/img3-1.jpg' alt='img2-1' />
               <h2 className='hub__title'>
                 Health and Wellness
               </h2>
@@ -95,7 +95,7 @@ function App() {
               </p>
             </div>
             <div className='hub__card'>
-              <img className='hub__img' src='img/img3-2.jpg' alt='img3-2'></img>
+              <img className='hub__img' src='img/img3-2.jpg' alt='img3-2' />
               <h2 className='hub__title'>
                 Boost Your Productivity
               </h2>
@@ -104,7 +104,7 @@ function App() {
               </p>
             </div>
             <div className='hub__card'>
-              <img className='hub__img' src='img/img3-3.jpg' alt='img3-3'></img>
+              <img className='hub__img' src='img/img3-3.jpg' alt='img3-3' />
               <h2 className='hub__title'>
                 Find Joy in Leisure
               </h2>
