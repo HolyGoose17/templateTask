@@ -122,6 +122,9 @@
   padding: 0.5rem 1.5rem;
   height: 2.5rem;
 }
+.main{
+  width: 100%;
+}
 .welcome {
   width: 100%;
   position: relative;
@@ -292,6 +295,7 @@
   width: 37.5rem;
   height: 37.5rem;
   object-fit: cover;
+  border-radius: var(--radius);
 }
 .hub {
   padding: 5.625rem 5rem;
@@ -338,6 +342,7 @@
   width: 100%;
   height: 13.875rem;
   object-fit: cover;
+  border-radius: var(--radius);
 }
 .hub__title {
   font-family: var(--font-family-base);
@@ -455,6 +460,7 @@
   width: 37.5rem;
   height: 37.5rem;
   object-fit: cover;
+  border-radius: var(--radius);
 }
 .benefits {
   height: 54.6875rem;
@@ -504,5 +510,63 @@
   font-weight: 600;
   line-height: 100%;
   background-color: var(--color-light);
+}
+.proof {
+  width: 100%;
+  height: 51.5rem;
+  padding: 5.625rem 5rem;
+  display: flex;
+  gap: 5rem;
+  background-color: var(--color-gray);
+}
+.proof__content {
+}
+.proof__head {
+}
+.proof__title {
+  font-family: var(--font-family-title);
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 128%;
+}
+.proof__desc {
+  font-family: var(--font-family-base);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+.proof__stats {
+}
+.proof__card {
+}
+.proof__percent {
+  font-family: var(--font-family-base);
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+.proof__details {
+  font-family: var(--font-family-base);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+.proof__btn {
+  font-family: var(--font-family-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+.proof__btn__arrow {
+  font-family: var(--font-family-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+.proof__img {
+  width: 37.5rem;
+  height: 37.5rem;
+  object-fit: cover;
+  border-radius: var(--radius);
 }
 

@@ -142,42 +142,82 @@ function App() {
           </div>
           <img className='intro__img' src='img/img4.jpg' alt='cyclist' />
         </section>
-        <section class='benefits'>
-          <h2 class='benefits__header'>
+        <section className='benefits'>
+          <h2 className='benefits__header'>
             Discover a World of Inspiration and Resources on LifeBlend Hub
           </h2>
-          <div class='benefits__cards'>
-            <div class='benefits__card'>
-              <img class='benefits__img' src='img/img5-1.jpg' alt='img5' />
-              <h4 class='benefits__title'>
+          <div className='benefits__cards'>
+            <div className='benefits__card'>
+              <img className='benefits__img' src='img/img5-1.jpg' alt='img5' />
+              <h4 className='benefits__title'>
                 Unlock Your Full Potential with LifeBlend Hub's Comprehensive Content
               </h4>
-              <p class='benefits__desc'>
+              <p className='benefits__desc'>
                 Engage with our curated content and resources to enhance every aspect of your lifestyle.
               </p>
-              <button class='benefits__btn_arrow'>Explore <span>{'>'}</span></button>
+              <button className='benefits__btn_arrow'>Explore <span>{'>'}</span></button>
             </div>
-            <div class='benefits__card'>
-              <img class='benefits__img' src='img/img5-2.jpg' alt='img5' />
-              <h4 class='benefits__title'>
+            <div className='benefits__card'>
+              <img className='benefits__img' src='img/img5-2.jpg' alt='img5' />
+              <h4 className='benefits__title'>
                 Stay Informed and Inspired with LifeBlend Hub's Diverse Content Content
               </h4>
-              <p class='benefits__desc'>
+              <p className='benefits__desc'>
                 Access our extensive collection of articles, videos, and guides to enrich your daily life.
               </p>
-              <button class='benefits__btn_arrow'>Discover <span>{'>'}</span></button>
+              <button className='benefits__btn_arrow'>Discover <span>{'>'}</span></button>
             </div>
-            <div class='benefits__card'>
-              <img class='benefits__img' src='img/img5-3.jpg' alt='img5' />
-              <h4 class='benefits__title'>
+            <div className='benefits__card'>
+              <img className='benefits__img' src='img/img5-3.jpg' alt='img5' />
+              <h4 className='benefits__title'>
                 Transform Your Lifestyle with LifeBlend Hub's Expertly Curated Resources
               </h4>
-              <p class='benefits__desc'>
+              <p className='benefits__desc'>
                 Find the tools and resources you need to achieve your goals and live your best life.
               </p>
-              <button class='benefits__btn_arrow'>Get Started<span>{'>'}</span></button>
+              <button className='benefits__btn_arrow'>Get Started<span>{'>'}</span></button>
             </div>
           </div>
+        </section>
+        <section class='proof'>
+          <div class='proof__content'>
+            <div class='proof__head'>
+              <h2 class='proof__title'>
+                Discover the Impact of LifeBlend Hub with These Fascinating Statistics
+              </h2>
+              <p class='proof__desc'>
+                LifeBlend Hub has reached millions of users worldwide, providing valuable resources and inspiring content to enhance their modern lifestyles.
+              </p>
+            </div>
+            <div class='proof__stats'>
+              <div class='proof__card'>
+                <h2 class='proof__percent'>
+                  50%
+                </h2>
+                <p class='proof__details'>
+                  Users report improved well-being and satisfaction with LifeBlend Hub.
+                </p>
+              </div>
+              <div class='proof__card'>
+                <h2 class='proof__percent'>
+                  50%
+                </h2>
+                <p class='proof__details'>
+                  LifeBlend Hub has become an essential part of users' lives.
+                </p>
+              </div>
+            </div>
+            <div>
+              <button class='proof__btn'>
+                Learn more
+              </button>
+              <button class='proof__btn__arrow'>
+                Sign Up
+                <span>{'>'}</span>
+              </button>
+            </div>
+          </div>
+          <img class='proof__img' src='img/img6.jpg' alt='runners' />
         </section>
       </main>
     <footer></footer>
