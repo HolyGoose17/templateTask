@@ -1,6 +1,10 @@
 import { BsGeoAlt } from "react-icons/bs";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { MdOutlinePhone } from "react-icons/md";
+import { CiFacebook } from "react-icons/ci";
+import { FaInstagram } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
+import { FaYoutube } from "react-icons/fa";
 import './App.css';
 
 function App() {
@@ -235,86 +239,97 @@ function App() {
             <p className='newsletter__details'>By clicking Sign Up, you agree to our Terms and Conditions.</p>
           </div>
         </section>
-        <section class='contact'>
-          <div class='contact__content'>
-            <div class='contact__head'>
-              <h4 class='contact_desc'>Connect</h4>
-              <h2 class='contact_title'>Contact LifeBlend</h2>
-              <p class='contact_details'>Have a question or need assistance? We're here to help!</p>
+        <section className='contact'>
+          <div className='contact__content'>
+            <div className='contact__head'>
+              <h4 className='contact_desc'>Connect</h4>
+              <h2 className='contact_title'>Contact LifeBlend</h2>
+              <p className='contact_details'>Have a question or need assistance? We're here to help!</p>
             </div>
-            <div class='contact__card'>
-              <HiOutlineMailOpen aria-label="Email" />
-              <h3 class='contact_type'>Email</h3>
-              <p class='contact_text'>Send us an email</p>
-              <p class='contact_text'>hello@lifeblendhub.com</p>
+            <div className='contact__card'>
+              <HiOutlineMailOpen className="contact__card_img" aria-label="Email" />
+              <h3 className='contact_type'>Email</h3>
+              <p className='contact_text'>Send us an email</p>
+              <p className='contact_text'>hello@lifeblendhub.com</p>
             </div>
-            <div class='contact__card'>
-              <MdOutlinePhone aria-label="Phone" />
-              <h3 class='contact_type'>Phone</h3>
-              <p class='contact_text'>Give us a call</p>
-              <p class='contact_text'>+1 (555) 123-4567</p>
+            <div className='contact__card'>
+              <MdOutlinePhone className="contact__card_img" aria-label="Phone" />
+              <h3 className='contact_type'>Phone</h3>
+              <p className='contact_text'>Give us a call</p>
+              <p className='contact_text'>+1 (555) 123-4567</p>
             </div>
-            <div class='contact__office'>
+            <div className='contact__office'>
               <div className="contact__office_head">
-                <BsGeoAlt aria-label="Office" />
-                <h3 class='contact_type'>Office</h3>
-                <p class='contact_text'>123 Main St, Anytown, USA</p>
+                <BsGeoAlt className="contact__card_img" aria-label="Office" />
+                <h3 className='contact_type'>Office</h3>
+                <p className='contact_text'>123 Main St, Anytown, USA</p>
               </div>
               <div className="contact__office_btn">
-                <button class='contact_btn' aria-label="Get Directions">Get Directions <span>{'>'}</span></button>
+                <button className='contact_btn' aria-label="Get Directions">Get Directions <span>{'>'}</span></button>
               </div>
             </div>
           </div>
-          <div class='contact__block'>
-            <img class='contact_img' src='img/image7.jpg' alt='img' />
+          <div className='contact__block'>
+            <img className='contact_img' src='img/image7.jpg' alt='img' />
           </div>
         </section>
       </main>
-    <footer class='footer'>
-      <div>
-        <div></div>
-        <div></div>
+    <footer class="footer">
+      <div class="footer__left">
+        <h1 class="footer_head">Logo</h1>
+        <h1 class="footer_bottom">Stay up to date on the latest features and releases by joining our newsletter.</h1>
+          <div class="footer__nav">
+            <input type="email" name="email" id="email" class="" value="Your email" aria-label="email" />
+            <button type="submit" value="Subscribe" class="">Subscribe</button>
+          </div>
+          <span class="">By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.</span>
       </div>
-      <div>
-        <div>
-          <h3></h3>
-          <div>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+      <div class="footer__right">
+        <ol class="footer__ol">
+          <h2 class="column__title">Column one</h2>
+          <li class="footer_li">Link one</li>
+          <li class="footer_li">Link two</li>
+          <li class="footer_li">Link three</li>
+          <li class="footer_li">Link four</li>
+          <li class="footer_li">Link five</li>
+        </ol>
+        <ol class="column column-two">
+          <h2 class="column__title">Column two</h2>
+          <li class="footer__link">Link one</li>
+          <li class="footer__link">Link two</li>
+          <li class="footer__link">Link three</li>
+          <li class="footer__link">Link four</li>
+          <li class="footer__link">Link five</li>
+        </ol>
+        <div class="column column-follow-us">
+          <h2 class="column__title follow-us__title">Follow us</h2>
+            <div class="follow-us__block">
+              <div class="footer__link">
+                <CiFacebook />
+                <span class="follow-us__text">Facebook</span>
+              </div>
+            </div>
+            <div class="follow-us__block">
+              <div class="footer__link">
+                <FaInstagram />
+                <span class="follow-us__text">Instagram</span>
+              </div>
+            </div>
+            <div class="follow-us__block">
+              <div  class="footer__link">
+                <CiLinkedin />
+                <span class="follow-us__text">Linkedin</span>
+              </div>
+            </div>
+            <div class="follow-us__block">
+              <div class="footer__link">
+                <FaYoutube />
+                <span class="follow-us__text">Youtube</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div>
-          <h3></h3>
-          <div>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-        </div>
-        <div>
-          <h3></h3>
-          <div>
-            <div>
-              <p></p>
-            </div>
-            <div>
-              <p></p>
-            </div>
-            <div>
-              <p></p>
-            </div>
-            <div>
-              <p></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
     </div>
   );
 }
