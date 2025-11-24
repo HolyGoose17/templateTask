@@ -1,3 +1,6 @@
+import { BsGeoAlt } from "react-icons/bs";
+import { HiOutlineMailOpen } from "react-icons/hi";
+import { MdOutlinePhone } from "react-icons/md";
 import './App.css';
 
 function App() {
@@ -232,8 +235,35 @@ function App() {
             <p className='newsletter__details'>By clicking Sign Up, you agree to our Terms and Conditions.</p>
           </div>
         </section>
-        <section className='contract'>
-
+        <section class='contact'>
+          <div class='contact__content'>
+            <div class='contact__head'>
+              <h4 class='contact_desc'>Connect</h4>
+              <h2 class='contact_title'>Contact LifeBlend</h2>
+              <p class='contact_details'>Have a question or need assistance? We're here to help!</p>
+            </div>
+            <div class='contact__card'>
+              <HiOutlineMailOpen aria-label="Email" />
+              <h3 class='contact_type'>Email</h3>
+              <p class='contact_text'>Send us an email</p>
+              <p class='contact_text'>hello@lifeblendhub.com</p>
+            </div>
+            <div class='contact__card'>
+              <MdOutlinePhone aria-label="Phone" />
+              <h3 class='contact_type'>Phone</h3>
+              <p class='contact_text'>Give us a call</p>
+              <p class='contact_text'>+1 (555) 123-4567</p>
+            </div>
+            <div class='contact__card'>
+              <BsGeoAlt aria-label="Office" />
+              <h3 class='contact_type'>Office</h3>
+              <p class='contact_text'>123 Main St, Anytown, USA</p>
+              <button class='contact_btn'>Get Directions <span>{'>'}</span></button>
+            </div>
+          </div>
+          <div class='contact__block'>
+            <img class='contact_img' src='img/image7.jpg' alt='img' />
+          </div>
         </section>
       </main>
     <footer></footer>
