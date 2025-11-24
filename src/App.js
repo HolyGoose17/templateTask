@@ -8,13 +8,13 @@ function App() {
     <div className='wrapper'>
       <header className='header'>
         <nav className='header__left'>
-          <button className='header__btn'>Discover LifeBlend</button>
-          <button className='header__btn'>Explore</button>
-          <button className='header__btn'>Inspiration</button>
-          <button className='header__btn'>Contact us</button>
+          <button className='header__btn' aria-label="Discover LifeBlend">Discover LifeBlend</button>
+          <button className='header__btn' aria-label="Explore">Explore</button>
+          <button className='header__btn' aria-label="Inspiration">Inspiration</button>
+          <button className='header__btn' aria-label="Contact us">Contact us</button>
         </nav>
         <nav className='header__right'>
-          <button className='header__right_btn btn'>Contact us</button>
+          <button className='header__right_btn btn' aria-label="Contact us">Contact us</button>
         </nav>
       </header>
       <main className='main'>
@@ -29,8 +29,8 @@ function App() {
                 Experience a comprehensive blend of content and resources to enhance and inspire every facet of your lifestyle.
               </p>
               <div className='welcome__actions'>
-                <button className='welcome__btn btn'>Explore</button>
-                <button className='welcome__btn btn'>Sign Up</button>
+                <button className='welcome__btn btn' aria-label="Explore">Explore</button>
+                <button className='welcome__btn btn' aria-label="Sign Up">Sign Up</button>
               </div>
             </div>
           </div>
@@ -67,8 +67,8 @@ function App() {
               </div>
             </div>
             <div className='hero__action'>
-              <button className='hero__btn'>Learn more</button>
-              <button className='hero__btn__arrow'>Sign Up {'>'}</button>
+              <button className='hero__btn' aria-label="Learn more">Learn more</button>
+              <button className='hero__btn__arrow' aria-label="Sign Up">Sign Up {'>'}</button>
             </div>
           </div>
             <div className='hero_img'>
@@ -117,8 +117,8 @@ function App() {
             </div>
           </div>
           <div className='hub_btns'>
-            <button className='btn hub__btn'>Join</button>
-            <button className='hub__btn__arrow'>Learn more {'>'}</button>
+            <button className='btn hub__btn' aria-label="Join">Join</button>
+            <button className='hub__btn__arrow' aria-label="Learn More">Learn more {'>'}</button>
           </div>
         </section>
         <section className='intro'>
@@ -135,10 +135,10 @@ function App() {
               </p>
             </div>
             <div className='intro__btns'>
-              <button className='btn intro__btn'>
+              <button className='btn intro__btn' aria-label="Learn More">
                 Learn more
               </button>
-              <button className='intro__btn_arrow'>
+              <button className='intro__btn_arrow' aria-label="Sign Up">
                 Sign Up<span>{'>'}</span>
               </button>
             </div>
@@ -158,7 +158,7 @@ function App() {
               <p className='benefits__desc'>
                 Engage with our curated content and resources to enhance every aspect of your lifestyle.
               </p>
-              <button className='benefits__btn_arrow'>Explore <span>{'>'}</span></button>
+              <button className='benefits__btn_arrow' aria-label="Explore">Explore <span>{'>'}</span></button>
             </div>
             <div className='benefits__card'>
               <img className='benefits__img' src='img/img5-2.jpg' alt='img5' />
@@ -168,7 +168,7 @@ function App() {
               <p className='benefits__desc'>
                 Access our extensive collection of articles, videos, and guides to enrich your daily life.
               </p>
-              <button className='benefits__btn_arrow'>Discover <span>{'>'}</span></button>
+              <button className='benefits__btn_arrow' aria-label="Discover">Discover <span>{'>'}</span></button>
             </div>
             <div className='benefits__card'>
               <img className='benefits__img' src='img/img5-3.jpg' alt='img5' />
@@ -178,7 +178,7 @@ function App() {
               <p className='benefits__desc'>
                 Find the tools and resources you need to achieve your goals and live your best life.
               </p>
-              <button className='benefits__btn_arrow'>Get Started<span>{'>'}</span></button>
+              <button className='benefits__btn_arrow' aria-label="Get Started">Get Started<span>{'>'}</span></button>
             </div>
           </div>
         </section>
@@ -211,10 +211,10 @@ function App() {
               </div>
             </div>
             <div className='proof__nav'>
-              <button className='proof__btn'>
+              <button className='proof__btn' aria-label="Learn More">
                 Learn more
               </button>
-              <button className='proof__btn__arrow'>
+              <button className='proof__btn__arrow' aria-label="Sign Up">
                 Sign Up
                 <span>{'>'}</span>
               </button>
@@ -230,7 +230,7 @@ function App() {
           <div className='newsletter__form'>
             <div className='newsletter__nav'>
               <input className='newsletter__inp' type='email' placeholder='Enter your email' name='email' />
-              <button className='newsletter__btn'>Sign in</button>
+              <button className='newsletter__btn' aria-label="Sign In">Sign in</button>
             </div>
             <p className='newsletter__details'>By clicking Sign Up, you agree to our Terms and Conditions.</p>
           </div>
@@ -254,11 +254,15 @@ function App() {
               <p class='contact_text'>Give us a call</p>
               <p class='contact_text'>+1 (555) 123-4567</p>
             </div>
-            <div class='contact__card'>
-              <BsGeoAlt aria-label="Office" />
-              <h3 class='contact_type'>Office</h3>
-              <p class='contact_text'>123 Main St, Anytown, USA</p>
-              <button class='contact_btn'>Get Directions <span>{'>'}</span></button>
+            <div class='contact__office'>
+              <div className="contact__office_head">
+                <BsGeoAlt aria-label="Office" />
+                <h3 class='contact_type'>Office</h3>
+                <p class='contact_text'>123 Main St, Anytown, USA</p>
+              </div>
+              <div className="contact__office_btn">
+                <button class='contact_btn' aria-label="Get Directions">Get Directions <span>{'>'}</span></button>
+              </div>
             </div>
           </div>
           <div class='contact__block'>
@@ -266,7 +270,51 @@ function App() {
           </div>
         </section>
       </main>
-    <footer></footer>
+    <footer class='footer'>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+      <div>
+        <div>
+          <h3></h3>
+          <div>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+        <div>
+          <h3></h3>
+          <div>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+        <div>
+          <h3></h3>
+          <div>
+            <div>
+              <p></p>
+            </div>
+            <div>
+              <p></p>
+            </div>
+            <div>
+              <p></p>
+            </div>
+            <div>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     </div>
   );
 }
