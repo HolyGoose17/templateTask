@@ -1,42 +1,43 @@
 /* <---------------------------------- FONTS ----------------------------------> */
 @font-face {
   font-family: 'Inter';
-  src: url('./assets/fonts/Inter24pt-Regular.woff2') format('woff2');
+  /* шрифты положи в public чтобы они не были в основном бандле css */
+  src: url('../public/assets/fonts/Inter24pt-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Inter';
-  src: url('./assets/fonts/Inter24pt-SemiBold.woff2') format('woff2');
+  src: url('../public/assets/fonts/Inter24pt-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('./assets/fonts/Montserrat-Bold.woff2') format('woff2');
+  src: url('../public/assets/fonts/Montserrat-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
-  src: url('./assets/fonts/Poppins-Regular.woff2') format('woff2');
+  src: url('../public/assets/fonts/Poppins-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
-  src: url('./assets/fonts/Poppins-Medium.woff2') format('woff2');
+  src: url('../public/assets/fonts/Poppins-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
-  src: url('./assets/fonts/Poppins-Bold.woff2') format('woff2');
+  src: url('../public/assets/fonts/Poppins-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -50,6 +51,8 @@
 
   --radius: 8px;
 
+  /* добавь переменные для шрифтов и для sizes */
+
   --font-family-accent: 'Inter', 'sans-serif';
   --font-family-title: 'Montserrat', 'sans-serif';
   --font-family-base: 'Poppins', 'sans-serif';
@@ -62,6 +65,7 @@
   border: 0;
   box-sizing: border-box;
 }
+/* добавляй отступы между блоками стилей */
 .wrapper {
   max-width: 90rem;
 }
@@ -76,7 +80,9 @@
   border: 1px solid black;
 }
 .header {
-  width: 90rem;
+  /* не используй жестко заданные размеры (width, height) используй padding, margin, max-width, min-width, max-height, min-height */
+  /* актуально для всех блоков */
+  width: 90rem; 
   height: 4.25rem;
   padding: 0.875rem 1.5rem;
   background-color: var(--color-light);
@@ -266,6 +272,7 @@
   border-radius: var(--radius);
   cursor: pointer;
 }
+/* мы можем в css использовать вложенность стилей как и в scss */
 .hero__btn:hover {
   transition: ease 0.8s;
   background-color: var(--color-dark);
