@@ -14,7 +14,7 @@ index d7c6f56..442cf83 100644
  
    --radius: 8px;
  
-+  /* добавь переменные для шрифтов и для sizes [U+2705]   */
++  /* добавь переменные для шрифтов и для sizes ✅ */
 +
    --font-family-accent: 'Inter', 'sans-serif';
    --font-family-title: 'Montserrat', 'sans-serif';

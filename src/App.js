@@ -1,3 +1,5 @@
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BsGeoAlt } from "react-icons/bs";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { MdOutlinePhone } from "react-icons/md";
@@ -9,6 +11,8 @@ import "./App.css";
 
 function App() {
   return (
+    // <QueryClientProvider>
+    //   <BrowserRouter>
     <div className="wrapper">
       {/* сделай header в виде компонента */}
       <header className="header">
@@ -41,8 +45,7 @@ function App() {
           <img className="welcome__img" src="img/img1.jpg" alt="img1" />
           <div className="welcome__content">
             <h2 className="welcome__title">
-              Stay tuned,
-              <br /> stay healthy
+              Stay tuned, stay healthy
             </h2>
             <div className="welcome__info">
               <p className="welcome__description">
@@ -67,9 +70,7 @@ function App() {
               <h4 className="hero__moto">Revolutionize</h4>
               <h2 className="hero__title">Discover a New Way of Living</h2>
               <p className="hero__desc">
-                LifeBlend Hub offers a unique and comprehensive approach to
-                modern living. With a curated blend of content and resources, we
-                aim to enhance and inspire every facet of your lifestyle.
+                LifeBlend Hub offers a unique and comprehensive approach to modern living. With a curated blend of content and resources, we aim to enhance and inspire every facet of your lifestyle.
               </p>
             </div>
             <div className="hero__features">
@@ -79,8 +80,7 @@ function App() {
               <div className="hero__feature">
                 <div className="hero__feature__title">Explore More</div>
                 <div className="hero__feature__desc">
-                  Unlock your potential with our diverse range of articles,
-                  guides, and tools.
+                  Unlock your potential with our diverse range of articles, guides, and tools.
                 </div>
               </div>
               <div className="hero__feature">
@@ -100,9 +100,7 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="hero_img">
-            <img src="img/img2.jpg" alt="img2" />
-          </div>
+          <img class='hero_img' src="img/img2.jpg" alt="img2" />
         </section>
         <section className="hub">
           <div className="hub__content">
@@ -180,8 +178,7 @@ function App() {
         </section>
         <section className="benefits">
           <h2 className="benefits__header">
-            Discover a World of Inspiration and
-            <br /> Resources on LifeBlend Hub
+            Discover a World of Inspiration and Resources on LifeBlend Hub
           </h2>
           {/* Это тоже список где есть данные которые перебираются в цикле и отображается компонент BenefitsCard */}
           <div className="benefits__cards">
@@ -283,7 +280,7 @@ function App() {
           </div>
           <div className="newsletter__form">
             {/* Создай компонент где будет тег form и внутри него будет input и button */}
-            <div className="newsletter__nav">
+            <form className="newsletter__nav">
               <input
                 className="newsletter__inp"
                 type="email"
@@ -293,7 +290,7 @@ function App() {
               <button className="newsletter__btn" aria-label="Sign In">
                 Sign in
               </button>
-            </div>
+            </form>
             <p className="newsletter__details">
               By clicking Sign Up, you agree to our Terms and Conditions.
             </p>
@@ -347,78 +344,70 @@ function App() {
       </main>
       <footer class="footer">
         <div class="footer__left">
-          <h1 class="footer_head">Logo</h1>
-          <h1 class="footer_bottom">
-            Stay up to date on the latest features and releases by joining our
-            newsletter.
-          </h1>
-          <div class="footer__nav">
-            {/* Создай компонент где будет тег form и внутри него будет input и button (можно переиспользовать прошлый компонент) */}
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class=""
-              value="Your email"
-              aria-label="email"
-            />
-            <button type="submit" value="Subscribe" class="">
-              Subscribe
-            </button>
+          <div class='footer_head'>
+            <p class="footer_title">Logo</p>
+            <h1 class="footer_desc">
+              Stay up to date on the latest features and releases by joining our newsletter.
+            </h1>
           </div>
-          <span class="">
-            By subscribing, you agree to our Privacy Policy and consent to
-            receive updates from our company.
-          </span>
+          <div class='footer_bottom'>
+            <form class="footer__form">
+              <input
+                class="footer_inp"
+                type="email"
+                placeholder="Enter your email"
+                name="email"
+              />
+              <button type="submit" value="Subscribe" class="footer_btn">
+                Subscribe
+              </button>
+            </form>
+            <p class="footer_details">
+              By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
+            </p>
+          </div>
         </div>
         <div class="footer__right">
-          {/* почему ol? лучше использовать ul и li для списка */}
-          <ol class="footer__ol">
-            <h2 class="column__title">Column one</h2>
+          <ul class="footer__ul">
+            <h2 class="footer__ul_title">Column one</h2>
             <li class="footer_li">Link one</li>
             <li class="footer_li">Link two</li>
             <li class="footer_li">Link three</li>
             <li class="footer_li">Link four</li>
             <li class="footer_li">Link five</li>
-          </ol>
-          <ol class="column column-two">
-            <h2 class="column__title">Column two</h2>
-            <li class="footer__link">Link one</li>
-            <li class="footer__link">Link two</li>
-            <li class="footer__link">Link three</li>
-            <li class="footer__link">Link four</li>
-            <li class="footer__link">Link five</li>
-          </ol>
-          <div class="column column-follow-us">
-            <h2 class="column__title follow-us__title">Follow us</h2>
-            <div class="follow-us__block">
-              <div class="footer__link">
-                <CiFacebook />
-                <span class="follow-us__text">Facebook</span>
-              </div>
-            </div>
-            <div class="follow-us__block">
-              <div class="footer__link">
-                <FaInstagram />
-                <span class="follow-us__text">Instagram</span>
-              </div>
-            </div>
-            <div class="follow-us__block">
-              <div class="footer__link">
-                <CiLinkedin />
-                <span class="follow-us__text">Linkedin</span>
-              </div>
-            </div>
-            <div class="follow-us__block">
-              <div class="footer__link">
-                <FaYoutube />
-                <span class="follow-us__text">Youtube</span>
-              </div>
-            </div>
-          </div>
+          </ul>
+          <ul class="footer__ul">
+            <h2 class="footer__ul_title">Column two</h2>
+            <li class="footer_li">Link one</li>
+            <li class="footer_li">Link two</li>
+            <li class="footer_li">Link three</li>
+            <li class="footer_li">Link four</li>
+            <li class="footer_li">Link five</li>
+          </ul>
+          <ul class="footer__ul">
+            <h2 class="footer__ul_title">Follow us</h2>
+            <li class="footer__media_block">
+              <CiFacebook class='footer_img' />
+              <span class="footer_li">Facebook</span>
+            </li>
+            <li class="footer__media_block">
+              <FaInstagram class='footer_img' />
+              <span class="footer_li">Instagram</span>
+            </li>
+            <li class="footer__media_block">
+              <CiLinkedin class='footer_img' />
+              <span class="footer_li">Linkedin</span>
+            </li>
+            <li class="footer__media_block">
+              <FaYoutube class='footer_img' />
+              <span class="footer_li">Youtube</span>
+            </li>
+          </ul>
         </div>
       </footer>
     </div>
+    //   </BrowserRouter>
+    // </QueryClientProvider>
   );
 }
 
