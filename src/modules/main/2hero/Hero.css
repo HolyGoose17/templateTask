@@ -70,7 +70,6 @@
 }
 .hero__action{
   display: flex;
-  gap: 0.2rem;
 }
 .hero_img{
   max-width: 37.5rem;

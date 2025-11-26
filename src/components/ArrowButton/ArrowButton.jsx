@@ -1,13 +1,13 @@
-import '../ArrowButton/ArrowButton.css'
+import styles from './ArrowButton.module.css';
 export const ArrowButton = ({ label, onClick, variant = 'default' }) => {
   return (
     <button
-      className='arrow_btn'
+      className={styles.arrow_btn}
       onClick={onClick}
       type="button"
       aria-label={label}
     >
-      {label} <span className='arrow'>&gt;</span>
+      {label} <span className={styles.arrow}>&gt;</span>
     </button>
   );
 };

@@ -1,8 +1,8 @@
-import '../Button/Button.css';
+import style from './Button.module.css';
 export const Button = ({label, variant = 'default'}) => {
     return (
         <button
-        className='btn'
+        className={style.btn}
         aria-label={label} 
         type="button">
             {label}

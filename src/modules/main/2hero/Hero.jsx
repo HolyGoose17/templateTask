@@ -6,7 +6,7 @@ export const Hero = () => {
         <section className="hero">
           <div className="hero__content">
             <div className="hero__lifeStyle">
-              <h4 className="hero__moto">Revolutionize</h4>
+              <p className="hero__moto">Revolutionize</p>
               <h2 className="hero__title">Discover a New Way of Living</h2>
               <p className="hero__desc">
                 LifeBlend Hub offers a unique and comprehensive approach to modern living. With a curated blend of content and resources, we aim to enhance and inspire every facet of your lifestyle.

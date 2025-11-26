@@ -1,8 +1,8 @@
-import '../HeaderButton/HeaderButton.css';
+import style from './HeaderButton.module.css';
 export const HeaderButton = ({label, variant = 'default'}) => {
     return (
         <button 
-        className='headerButton' 
+        className={style.headerButton} 
         aria-label={label} 
         type="button">
             {label}
