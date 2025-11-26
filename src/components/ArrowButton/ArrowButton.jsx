@@ -2,12 +2,12 @@ import styles from './ArrowButton.module.css';
 export const ArrowButton = ({ label, onClick, variant = 'default' }) => {
   return (
     <button
-      className={styles.arrow_btn}
+      className={styles.arrowText}
       onClick={onClick}
       type="button"
       aria-label={label}
     >
-      {label} <span className={styles.arrow}>&gt;</span>
+      {label} <span className={styles.arrowSymbol}>&gt;</span>
     </button>
   );
 };

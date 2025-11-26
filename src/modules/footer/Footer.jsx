@@ -5,65 +5,65 @@ import { FaYoutube } from "react-icons/fa";
 
 export const Footer = () => {
     return (
-        <footer class="footer">
-        <div class="footer__left">
-          <div class='footer_head'>
-            <p class="footer_title">Logo</p>
-            <h1 class="footer_desc">
+        <footer className="footer">
+        <div className="footer__left">
+          <div className='footer_head'>
+            <p className="footer_title">Logo</p>
+            <h1 className="footer_desc">
               Stay up to date on the latest features and releases by joining our newsletter.
             </h1>
           </div>
-          <div class='footer_bottom'>
-            <form class="footer__form">
+          <div className='footer_bottom'>
+            <form className="footer__form">
               <input
-                class="footer_inp"
+                className="footer_inp"
                 type="email"
                 placeholder="Enter your email"
                 name="email"
               />
-              <button type="submit" value="Subscribe" class="footer_btn" aria-label="Subscribe">
+              <button type="submit" value="Subscribe" className="footer_btn" aria-label="Subscribe">
                 Subscribe
               </button>
             </form>
-            <p class="footer_details">
+            <p className="footer_details">
               By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
             </p>
           </div>
         </div>
-        <div class="footer__right">
-          <ul class="footer__ul">
-            <h2 class="footer__ul_title">Column one</h2>
-            <li class="footer_li">Link one</li>
-            <li class="footer_li">Link two</li>
-            <li class="footer_li">Link three</li>
-            <li class="footer_li">Link four</li>
-            <li class="footer_li">Link five</li>
+        <div className="footer__right">
+          <ul className="footer__ul">
+            <h2 className="footer__ul_title">Column one</h2>
+            <li className="footer_li">Link one</li>
+            <li className="footer_li">Link two</li>
+            <li className="footer_li">Link three</li>
+            <li className="footer_li">Link four</li>
+            <li className="footer_li">Link five</li>
           </ul>
-          <ul class="footer__ul">
-            <h2 class="footer__ul_title">Column two</h2>
-            <li class="footer_li">Link one</li>
-            <li class="footer_li">Link two</li>
-            <li class="footer_li">Link three</li>
-            <li class="footer_li">Link four</li>
-            <li class="footer_li">Link five</li>
+          <ul className="footer__ul">
+            <h2 className="footer__ul_title">Column two</h2>
+            <li className="footer_li">Link one</li>
+            <li className="footer_li">Link two</li>
+            <li className="footer_li">Link three</li>
+            <li className="footer_li">Link four</li>
+            <li className="footer_li">Link five</li>
           </ul>
-          <ul class="footer__ul">
-            <h2 class="footer__ul_title">Follow us</h2>
-            <li class="footer__media_block">
-              <CiFacebook class='footer_img' />
-              <span class="footer_li">Facebook</span>
+          <ul className="footer__ul">
+            <h2 className="footer__ul_title">Follow us</h2>
+            <li className="footer__media_block">
+              <CiFacebook className='footer_img' />
+              <span className="footer_li">Facebook</span>
             </li>
-            <li class="footer__media_block">
-              <FaInstagram class='footer_img' />
-              <span class="footer_li">Instagram</span>
+            <li className="footer__media_block">
+              <FaInstagram className='footer_img' />
+              <span className="footer_li">Instagram</span>
             </li>
-            <li class="footer__media_block">
-              <CiLinkedin class='footer_img' />
-              <span class="footer_li">Linkedin</span>
+            <li className="footer__media_block">
+              <CiLinkedin className='footer_img' />
+              <span className="footer_li">Linkedin</span>
             </li>
-            <li class="footer__media_block">
-              <FaYoutube class='footer_img' />
-              <span class="footer_li">Youtube</span>
+            <li className="footer__media_block">
+              <FaYoutube className='footer_img' />
+              <span className="footer_li">Youtube</span>
             </li>
           </ul>
         </div>

@@ -1,5 +1,6 @@
 import { ArrowButton } from '../../../components/ArrowButton/ArrowButton'
 import { Button } from '../../../components/Button/Button'
+import { InfoCard } from '../../../components/InfoCard/InfoCard'
 import '../3hub/Hub.css'
 
 export const Hub = () => {
@@ -17,30 +18,24 @@ export const Hub = () => {
           </div>
           <div className="hub__cards">
             {/* Создай компонент HubCard */}
-            <div className="hub__card">
-              <img className="hub__img" src="img/img3-1.jpg" alt="img2-1" />
-              <h3 className="hub__title">Health and Wellness</h3>
-              <p className="hub__desc">
-                Discover expert advice and tips on maintaining a healthy
-                lifestyle.
-              </p>
-            </div>
-            <div className="hub__card">
-              <img className="hub__img" src="img/img3-2.jpg" alt="img3-2" />
-              <h3 className="hub__title">Boost Your Productivity</h3>
-              <p className="hub__desc">
-                Learn effective strategies to maximize your productivity and
-                achieve your goals.
-              </p>
-            </div>
-            <div className="hub__card">
-              <img className="hub__img" src="img/img3-3.jpg" alt="img3-3" />
-              <h3 className="hub__title">Find Joy in Leisure</h3>
-              <p className="hub__desc">
-                Discover exciting activities and hobbies to make the most of
-                your leisure time.
-              </p>
-            </div>
+            <InfoCard
+            imageSrc='img/img3-1.jpg'
+            altText='TreadMill'
+            title='Health and Wellness'
+            description='Discover expert advice and tips on maintaining a healthy lifestyle.'
+            />
+            <InfoCard
+            imageSrc='img/img3-2.jpg'
+            altText='Basketball'
+            title='Boost Your Productivity'
+            description='Learn effective strategies to maximize your productivity and achieve your goals.'
+            />
+            <InfoCard
+            imageSrc='img/img3-3.jpg'
+            altText='Field'
+            title='Find Joy in Leisure'
+            description='Discover exciting activities and hobbies to make the most of your leisure time.'
+            />
           </div>
           <div className="hub_btns">
             <Button label='Join'/>

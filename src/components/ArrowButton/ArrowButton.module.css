@@ -1,4 +1,4 @@
-.arrow_btn{
+.arrowText{
     color: var(--color-dark);
     font-family: var(--font-family-accent);
     font-size: 0.875rem;
@@ -11,7 +11,8 @@
     gap: 0.5rem;
     padding: 0.5rem 1rem;
 }
-.arrow{
+
+.arrowSymbol{
     font-size: 1.125rem;
     line-height: 1;
 }
