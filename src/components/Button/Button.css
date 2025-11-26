@@ -1,0 +1,16 @@
+.btn {
+  background-color: inherit;
+  border: 1px solid black;
+  border-radius: var(--radius);
+  padding: 0.5rem 1.5rem;
+  font-family: var(--font-family-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 100%;
+
+  &:hover {
+    transition: ease 0.8s;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+}

@@ -1,0 +1,17 @@
+.arrow_btn{
+    color: var(--color-dark);
+    font-family: var(--font-family-accent);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 100%;
+    background-color: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+.arrow{
+    font-size: 1.125rem;
+    line-height: 1;
+}

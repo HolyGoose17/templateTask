@@ -23,7 +23,7 @@ index d7c6f56..442cf83 100644
    border: 0;
    box-sizing: border-box;
  }
-+/* добавляй отступы между блоками стилей */
++/* добавляй отступы между блоками стилей ✅ */
  .wrapper {
    max-width: 90rem;
  }
@@ -32,8 +32,8 @@ index d7c6f56..442cf83 100644
  }
  .header {
 -  width: 90rem;
-+  /* не используй жестко заданные размеры (width, height) используй padding, margin, max-width, min-width, max-height, min-height */
-+  /* актуально для всех блоков */
++  /* не используй жестко заданные размеры (width, height) используй padding, margin, max-width, min-width, max-height, min-height ✅ */
++  /* актуально для всех блоков ✅ */
 +  width: 90rem; 
    height: 4.25rem;
    padding: 0.875rem 1.5rem;

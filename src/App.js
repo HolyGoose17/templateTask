@@ -1,107 +1,22 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BsGeoAlt } from "react-icons/bs";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import { MdOutlinePhone } from "react-icons/md";
-import { CiFacebook } from "react-icons/ci";
-import { FaInstagram } from "react-icons/fa";
-import { CiLinkedin } from "react-icons/ci";
-import { FaYoutube } from "react-icons/fa";
+
 import "./App.css";
+import { Header } from "./modules/header/Header";
+import { Footer } from "./modules/footer/Footer";
+import { Welcome } from "./modules/main/1welcome/Welcome";
+import { Hero } from "./modules/main/2hero/Hero";
 
 function App() {
-  return (
-    // <QueryClientProvider>
-    //   <BrowserRouter>
+  return (  
     <div className="wrapper">
       {/* сделай header в виде компонента */}
-      <header className="header">
-        <nav className="header__left">
-          {/* Используй ul и li для списка */}
-          {/* сделай переиспользуемые кнопки в виде компонентов */}
-          {/* используй css modules для стилей */}
-          <button className="header__btn" aria-label="Discover LifeBlend">
-            Discover LifeBlend
-          </button>
-          <button className="header__btn" aria-label="Explore">
-            Explore
-          </button>
-          <button className="header__btn" aria-label="Inspiration">
-            Inspiration
-          </button>
-          <button className="header__btn" aria-label="Contact us">
-            Contact us
-          </button>
-        </nav>
-        <nav className="header__right">
-          <button className="header__right_btn btn" aria-label="Contact us">
-            Contact us
-          </button>
-        </nav>
-      </header>
+      <Header/>
       <main className="main">
         {/* каждая секция должна быть в виде компонента */}
-        <section className="welcome">
-          <img className="welcome__img" src="img/img1.jpg" alt="img1" />
-          <div className="welcome__content">
-            <h2 className="welcome__title">
-              Stay tuned, stay healthy
-            </h2>
-            <div className="welcome__info">
-              <p className="welcome__description">
-                Experience a comprehensive blend of content and resources to
-                enhance and inspire every facet of your lifestyle.
-              </p>
-              <div className="welcome__actions">
-                <button className="welcome__btn btn" aria-label="Explore">
-                  Explore
-                </button>
-                <button className="welcome__btn btn" aria-label="Sign Up">
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="hero">
-          <div className="hero__content">
-            <div className="hero__lifeStyle">
-              {/* не думаю что логично отображать h4 перед h2, лучше просто p или span */}
-              <h4 className="hero__moto">Revolutionize</h4>
-              <h2 className="hero__title">Discover a New Way of Living</h2>
-              <p className="hero__desc">
-                LifeBlend Hub offers a unique and comprehensive approach to modern living. With a curated blend of content and resources, we aim to enhance and inspire every facet of your lifestyle.
-              </p>
-            </div>
-            <div className="hero__features">
-              {/* используй ul и li для списка */}
-              {/* используй один компонент для списка */}
-              {/* у 3 секций заголовок и описание одинаковые, лучше использовать один компонент для каждой секции */}
-              <div className="hero__feature">
-                <div className="hero__feature__title">Explore More</div>
-                <div className="hero__feature__desc">
-                  Unlock your potential with our diverse range of articles, guides, and tools.
-                </div>
-              </div>
-              <div className="hero__feature">
-                <div className="hero__feature__title">Get Inspired</div>
-                <div className="hero__feature__desc">
-                  Discover stories of transformation and success from our
-                  vibrant community.
-                </div>
-              </div>
-            </div>
-            <div className="hero__action">
-              <button className="hero__btn" aria-label="Learn more">
-                Learn more
-              </button>
-              <button className="hero__btn__arrow" aria-label="Sign Up">
-                Sign Up {">"}
-              </button>
-            </div>
-          </div>
-          <img class='hero_img' src="img/img2.jpg" alt="img2" />
-        </section>
+        <Welcome/>
+        <Hero/>
         <section className="hub">
           <div className="hub__content">
             <h4 className="hub__moto">Discover</h4>
@@ -142,10 +57,10 @@ function App() {
           </div>
           {/* Такие же кнопки в еще 3 блоках, создай переиспользуемый компонент */}
           <div className="hub_btns">
-            <button className="btn hub__btn" aria-label="Join">
+            <button className="btn hub__btn" aria-label="Join" type="button">
               Join
             </button>
-            <button className="hub__btn__arrow" aria-label="Learn More">
+            <button className="hub__btn__arrow" aria-label="Learn More" type="button">
               Learn more {">"}
             </button>
           </div>
@@ -166,10 +81,10 @@ function App() {
               </p>
             </div>
             <div className="intro__btns">
-              <button className="btn intro__btn" aria-label="Learn More">
+              <button className="btn intro__btn" aria-label="Learn More" type="button">
                 Learn more
               </button>
-              <button className="intro__btn_arrow" aria-label="Sign Up">
+              <button className="intro__btn_arrow" aria-label="Sign Up" type="button">
                 Sign Up<span>{">"}</span>
               </button>
             </div>
@@ -192,7 +107,7 @@ function App() {
                 Engage with our curated content and resources to enhance every
                 aspect of your lifestyle.
               </p>
-              <button className="benefits__btn_arrow" aria-label="Explore">
+              <button className="benefits__btn_arrow" aria-label="Explore" type="button">
                 Explore <span>{">"}</span>
               </button>
             </div>
@@ -206,7 +121,7 @@ function App() {
                 Access our extensive collection of articles, videos, and guides
                 to enrich your daily life.
               </p>
-              <button className="benefits__btn_arrow" aria-label="Discover">
+              <button className="benefits__btn_arrow" aria-label="Discover" type="button">
                 Discover <span>{">"}</span>
               </button>
             </div>
@@ -220,7 +135,7 @@ function App() {
                 Find the tools and resources you need to achieve your goals and
                 live your best life.
               </p>
-              <button className="benefits__btn_arrow" aria-label="Get Started">
+              <button className="benefits__btn_arrow" aria-label="Get Started" type="button">
                 Get Started<span>{">"}</span>
               </button>
             </div>
@@ -257,10 +172,10 @@ function App() {
               </div>
             </div>
             <div className="proof__nav">
-              <button className="proof__btn" aria-label="Learn More">
+              <button className="proof__btn" aria-label="Learn More" type="button">
                 Learn more
               </button>
-              <button className="proof__btn__arrow" aria-label="Sign Up">
+              <button className="proof__btn__arrow" aria-label="Sign Up" type="button">
                 Sign Up
                 <span>{">"}</span>
               </button>
@@ -287,7 +202,7 @@ function App() {
                 placeholder="Enter your email"
                 name="email"
               />
-              <button className="newsletter__btn" aria-label="Sign In">
+              <button className="newsletter__btn" aria-label="Sign In" type="submit">
                 Sign in
               </button>
             </form>
@@ -331,7 +246,7 @@ function App() {
                 <p className="contact_text">123 Main St, Anytown, USA</p>
               </div>
               <div className="contact__office_btn">
-                <button className="contact_btn" aria-label="Get Directions">
+                <button className="contact_btn" aria-label="Get Directions" type="button">
                   Get Directions <span>{">"}</span>
                 </button>
               </div>
@@ -342,72 +257,8 @@ function App() {
           </div>
         </section>
       </main>
-      <footer class="footer">
-        <div class="footer__left">
-          <div class='footer_head'>
-            <p class="footer_title">Logo</p>
-            <h1 class="footer_desc">
-              Stay up to date on the latest features and releases by joining our newsletter.
-            </h1>
-          </div>
-          <div class='footer_bottom'>
-            <form class="footer__form">
-              <input
-                class="footer_inp"
-                type="email"
-                placeholder="Enter your email"
-                name="email"
-              />
-              <button type="submit" value="Subscribe" class="footer_btn">
-                Subscribe
-              </button>
-            </form>
-            <p class="footer_details">
-              By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
-            </p>
-          </div>
-        </div>
-        <div class="footer__right">
-          <ul class="footer__ul">
-            <h2 class="footer__ul_title">Column one</h2>
-            <li class="footer_li">Link one</li>
-            <li class="footer_li">Link two</li>
-            <li class="footer_li">Link three</li>
-            <li class="footer_li">Link four</li>
-            <li class="footer_li">Link five</li>
-          </ul>
-          <ul class="footer__ul">
-            <h2 class="footer__ul_title">Column two</h2>
-            <li class="footer_li">Link one</li>
-            <li class="footer_li">Link two</li>
-            <li class="footer_li">Link three</li>
-            <li class="footer_li">Link four</li>
-            <li class="footer_li">Link five</li>
-          </ul>
-          <ul class="footer__ul">
-            <h2 class="footer__ul_title">Follow us</h2>
-            <li class="footer__media_block">
-              <CiFacebook class='footer_img' />
-              <span class="footer_li">Facebook</span>
-            </li>
-            <li class="footer__media_block">
-              <FaInstagram class='footer_img' />
-              <span class="footer_li">Instagram</span>
-            </li>
-            <li class="footer__media_block">
-              <CiLinkedin class='footer_img' />
-              <span class="footer_li">Linkedin</span>
-            </li>
-            <li class="footer__media_block">
-              <FaYoutube class='footer_img' />
-              <span class="footer_li">Youtube</span>
-            </li>
-          </ul>
-        </div>
-      </footer>
+      <Footer/>
     </div>
-    //   </BrowserRouter>
-    // </QueryClientProvider>
   );
 }
 

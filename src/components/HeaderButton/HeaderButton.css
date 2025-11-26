@@ -1,0 +1,7 @@
+.headerButton  {
+  background-color: inherit;
+  color: var(--color-dark);
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
