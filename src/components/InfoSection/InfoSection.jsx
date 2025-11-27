@@ -1,9 +1,9 @@
 import style from './InfoSection.module.css'
-export const InfoSection = ({subTitle, title, description}) => {
+export const InfoSection = ({subTitle, title, description, variant='sm'}) => {
     return (
         <div className={style.infoSection}>
             {subTitle && <p className={style.subTitle}>{subTitle}</p>}
-            {title && <h2 className={style.title}>{title}</h2>}
+            {title && <h2 className={`${style.title} ${style[variant]}`}>{title}</h2>}
             {description && <span className={style.description}>{description}</span>}
         </div>
     )

@@ -11,7 +11,8 @@ export const Hero = () => {
             <InfoSection 
             subTitle='Revolutionize'
             title='Discover a New Way of Living'
-            description='LifeBlend Hub offers a unique and comprehensive approach to modern living. With a curated blend of content and resources, we aim to enhance and inspire every facet of your lifestyle.' 
+            description='LifeBlend Hub offers a unique and comprehensive approach to modern living. With a curated blend of content and resources, we aim to enhance and inspire every facet of your lifestyle.'
+            variant="lg" 
             />
             <div className="hero__features">
               <TextBlock 

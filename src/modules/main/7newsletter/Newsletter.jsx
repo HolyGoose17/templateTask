@@ -8,6 +8,7 @@ export const Newsletter = () => {
           <InfoSection
           title="Get the Latest LifeBlend Updates"
           description="Subscribe to our newsletter for regular updates on lifestyle trends and tips."
+          variant='lg'
           />
           <Form
           placeholder="Enter your email"

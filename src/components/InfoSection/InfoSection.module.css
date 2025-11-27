@@ -7,7 +7,6 @@
 }
 .subTitle {
   max-width: 8rem;
-  max-height: 2rem;
   font-family: var(--font-family-base);
   font-size: 1.125rem;
   font-weight: 500;
@@ -15,15 +14,18 @@
 }
 .title {
   max-width: 57.5rem;
-  max-height: 8.75rem;
   font-family: var(--font-family-title);
-  font-size: 3.25rem;
   font-weight: 700;
   line-height: 128%;
 }
+.title.sm{
+  font-size: 2rem;
+}
+.title.lg{
+  font-size: 3.25rem;
+}
 .description {
-  max-width: 50.5rem;
-  max-height: 5.625rem;
+  max-width: 54.5rem;
   font-family: var(--font-family-base);
   font-size: 1.125rem;
   font-weight: 400;

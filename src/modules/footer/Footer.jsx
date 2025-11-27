@@ -1,53 +1,42 @@
+import { Form } from "../../components/Form/Form";
+import { InfoSection } from "../../components/InfoSection/InfoSection";
+import { FooterList } from "../../components/FooterList/FooterList";
+import { FooterMedia } from "../../components/FooterMedia/FooterMedia";
 import { CiFacebook } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { FaYoutube } from "react-icons/fa";
+import './Footer.css'
 
 export const Footer = () => {
+  const socialPlatforms = [
+    { name: 'Facebook', icon: CiFacebook },
+    { name: 'Instagram', icon: FaInstagram },
+    { name: 'Linkedin', icon: CiLinkedin },
+    { name: 'Youtube', icon: FaYoutube },
+  ];
     return (
         <footer className="footer">
         <div className="footer__left">
-          <div className='footer_head'>
-            <p className="footer_title">Logo</p>
-            <h1 className="footer_desc">
-              Stay up to date on the latest features and releases by joining our newsletter.
-            </h1>
-          </div>
-          <div className='footer_bottom'>
-            <form className="footer__form">
-              <input
-                className="footer_inp"
-                type="email"
-                placeholder="Enter your email"
-                name="email"
-              />
-              <button type="submit" value="Subscribe" className="footer_btn" aria-label="Subscribe">
-                Subscribe
-              </button>
-            </form>
-            <p className="footer_details">
-              By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
-            </p>
-          </div>
+          <InfoSection 
+          title="Logo"
+          description="Stay up to date on the latest features and releases by joining our newsletter."
+          variant="sm" />
+          <Form 
+          placeholder="Enter your email"
+          buttonLabel="Subscribe"
+          description="By subscribing, you agree to our Privacy Policy and consent to receive updates from our company." />
         </div>
         <div className="footer__right">
-          <ul className="footer__ul">
-            <h2 className="footer__ul_title">Column one</h2>
-            <li className="footer_li">Link one</li>
-            <li className="footer_li">Link two</li>
-            <li className="footer_li">Link three</li>
-            <li className="footer_li">Link four</li>
-            <li className="footer_li">Link five</li>
-          </ul>
-          <ul className="footer__ul">
-            <h2 className="footer__ul_title">Column two</h2>
-            <li className="footer_li">Link one</li>
-            <li className="footer_li">Link two</li>
-            <li className="footer_li">Link three</li>
-            <li className="footer_li">Link four</li>
-            <li className="footer_li">Link five</li>
-          </ul>
-          <ul className="footer__ul">
+          <FooterList 
+          title="Column one"
+          items={['Link one', 'Link two', 'Link three', 'Link four', 'Link five']} />
+          <FooterList 
+          title="Column two"
+          items={['Link one', 'Link two', 'Link three', 'Link four', 'Link five']} />
+          <FooterMedia 
+          platforms={socialPlatforms} />
+          {/* <ul className="footer__ul">
             <h2 className="footer__ul_title">Follow us</h2>
             <li className="footer__media_block">
               <CiFacebook className='footer_img' />
@@ -65,7 +54,7 @@ export const Footer = () => {
               <FaYoutube className='footer_img' />
               <span className="footer_li">Youtube</span>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </footer>
     )

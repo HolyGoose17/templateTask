@@ -10,7 +10,8 @@ export const Hub = () => {
           <InfoSection 
           subTitle='Discover'
           title='Unlock the Power of LifeBlend Hub'
-          description='LifeBlend Hub is your one-stop destination for all things related to health, productivity, leisure, and personal growth. Explore our comprehensive blend of content and resources to enhance and inspire every facet of your lifestyle.' />
+          description='LifeBlend Hub is your one-stop destination for all things related to health, productivity, leisure, and personal growth. Explore our comprehensive blend of content and resources to enhance and inspire every facet of your lifestyle.'
+          variant='lg' />
           <div className="hub__cards">
             <InfoCard
             imageSrc='img/img3-1.jpg'

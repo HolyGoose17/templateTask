@@ -10,7 +10,8 @@ export const Intro = () => {
                 <InfoSection 
                 subTitle='Discover'
                 title='Unlock the Secrets to a Balanced Lifestyle'
-                description='LifeBlend Hub provides a comprehensive blend of content and resources to help you achieve balance in every aspect of your life. From wellness tips and personal development strategies to home organization hacks and travel inspiration, we`ve got you covered.' />
+                description='LifeBlend Hub provides a comprehensive blend of content and resources to help you achieve balance in every aspect of your life. From wellness tips and personal development strategies to home organization hacks and travel inspiration, we`ve got you covered.'
+                variant='lg' />
             <div className="intro__btns">
                 <Button 
                 label='Learn more' />
