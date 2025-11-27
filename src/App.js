@@ -9,6 +9,7 @@ import { Welcome } from "./modules/main/1welcome/Welcome";
 import { Hero } from "./modules/main/2hero/Hero";
 import { Hub } from "./modules/main/3hub/Hub";
 import { Intro } from "./modules/main/4intro/Intro";
+import { Benefits } from "./modules/main/5benefits/Benefits";
 
 function App() {
   return (  
@@ -21,56 +22,7 @@ function App() {
         <Hero/>
         <Hub/>
         <Intro/>
-        <section className="benefits">
-          <h2 className="benefits__header">
-            Discover a World of Inspiration and Resources on LifeBlend Hub
-          </h2>
-          {/* Это тоже список где есть данные которые перебираются в цикле и отображается компонент BenefitsCard */}
-          <div className="benefits__cards">
-            <div className="benefits__card">
-              <img className="benefits__img" src="img/img5-1.jpg" alt="img5" />
-              <h4 className="benefits__title">
-                Unlock Your Full Potential with LifeBlend Hub's Comprehensive
-                Content
-              </h4>
-              <p className="benefits__desc">
-                Engage with our curated content and resources to enhance every
-                aspect of your lifestyle.
-              </p>
-              <button className="benefits__btn_arrow" aria-label="Explore" type="button">
-                Explore <span>{">"}</span>
-              </button>
-            </div>
-            <div className="benefits__card">
-              <img className="benefits__img" src="img/img5-2.jpg" alt="img5" />
-              <h4 className="benefits__title">
-                Stay Informed and Inspired with LifeBlend Hub's Diverse Content
-                Content
-              </h4>
-              <p className="benefits__desc">
-                Access our extensive collection of articles, videos, and guides
-                to enrich your daily life.
-              </p>
-              <button className="benefits__btn_arrow" aria-label="Discover" type="button">
-                Discover <span>{">"}</span>
-              </button>
-            </div>
-            <div className="benefits__card">
-              <img className="benefits__img" src="img/img5-3.jpg" alt="img5" />
-              <h4 className="benefits__title">
-                Transform Your Lifestyle with LifeBlend Hub's Expertly Curated
-                Resources
-              </h4>
-              <p className="benefits__desc">
-                Find the tools and resources you need to achieve your goals and
-                live your best life.
-              </p>
-              <button className="benefits__btn_arrow" aria-label="Get Started" type="button">
-                Get Started<span>{">"}</span>
-              </button>
-            </div>
-          </div>
-        </section>
+        <Benefits/>
         <section className="proof">
           <div className="proof__content">
             <div className="proof__head">

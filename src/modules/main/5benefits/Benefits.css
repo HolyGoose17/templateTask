@@ -1,0 +1,34 @@
+.benefits {
+  max-height: 54.6875rem;
+  margin-top: 1rem;
+  padding: 5.625rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  text-align: center;
+}
+.benefits__header {
+  max-width: 78rem;
+  max-height: 8.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  text-align: center;
+  font-family: var(--font-family-title);
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 128%;
+}
+.benefits__cards {
+  display: flex;
+  gap: 3rem;
+}
+.benefits__img {
+  max-height: 243px;
+  max-width: 395px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
