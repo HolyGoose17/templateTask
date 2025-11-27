@@ -7,6 +7,8 @@ import { Header } from "./modules/header/Header";
 import { Footer } from "./modules/footer/Footer";
 import { Welcome } from "./modules/main/1welcome/Welcome";
 import { Hero } from "./modules/main/2hero/Hero";
+import { Hub } from "./modules/main/3hub/Hub";
+import { Intro } from "./modules/main/4intro/Intro";
 
 function App() {
   return (  
@@ -17,80 +19,8 @@ function App() {
         {/* каждая секция должна быть в виде компонента */}
         <Welcome/>
         <Hero/>
-        <section className="hub">
-          <div className="hub__content">
-            <h4 className="hub__moto">Discover</h4>
-            <h2 className="hub__head">Unlock the Power of LifeBlend Hub</h2>
-            <p className="hub__body">
-              LifeBlend Hub is your one-stop destination for all things related
-              to health, productivity, leisure, and personal growth. Explore our
-              comprehensive blend of content and resources to enhance and
-              inspire every facet of your lifestyle.
-            </p>
-          </div>
-          <div className="hub__cards">
-            {/* Создай компонент HubCard */}
-            <div className="hub__card">
-              <img className="hub__img" src="img/img3-1.jpg" alt="img2-1" />
-              <h2 className="hub__title">Health and Wellness</h2>
-              <p className="hub__desc">
-                Discover expert advice and tips on maintaining a healthy
-                lifestyle.
-              </p>
-            </div>
-            <div className="hub__card">
-              <img className="hub__img" src="img/img3-2.jpg" alt="img3-2" />
-              <h2 className="hub__title">Boost Your Productivity</h2>
-              <p className="hub__desc">
-                Learn effective strategies to maximize your productivity and
-                achieve your goals.
-              </p>
-            </div>
-            <div className="hub__card">
-              <img className="hub__img" src="img/img3-3.jpg" alt="img3-3" />
-              <h2 className="hub__title">Find Joy in Leisure</h2>
-              <p className="hub__desc">
-                Discover exciting activities and hobbies to make the most of
-                your leisure time.
-              </p>
-            </div>
-          </div>
-          {/* Такие же кнопки в еще 3 блоках, создай переиспользуемый компонент */}
-          <div className="hub_btns">
-            <button className="btn hub__btn" aria-label="Join" type="button">
-              Join
-            </button>
-            <button className="hub__btn__arrow" aria-label="Learn More" type="button">
-              Learn more {">"}
-            </button>
-          </div>
-        </section>
-        <section className="intro">
-          <div className="intro__container">
-            <div className="intro__text">
-              <h4 className="intro__moto">Discover</h4>
-              <h2 className="intro__title">
-                Unlock the Secrets to a Balanced Lifestyle
-              </h2>
-              <p className="intro__desc">
-                LifeBlend Hub provides a comprehensive blend of content and
-                resources to help you achieve balance in every aspect of your
-                life. From wellness tips and personal development strategies to
-                home organization hacks and travel inspiration, we've got you
-                covered.
-              </p>
-            </div>
-            <div className="intro__btns">
-              <button className="btn intro__btn" aria-label="Learn More" type="button">
-                Learn more
-              </button>
-              <button className="intro__btn_arrow" aria-label="Sign Up" type="button">
-                Sign Up<span>{">"}</span>
-              </button>
-            </div>
-          </div>
-          <img className="intro__img" src="img/img4.jpg" alt="cyclist" />
-        </section>
+        <Hub/>
+        <Intro/>
         <section className="benefits">
           <h2 className="benefits__header">
             Discover a World of Inspiration and Resources on LifeBlend Hub

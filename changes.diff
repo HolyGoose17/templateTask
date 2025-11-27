@@ -23,7 +23,7 @@ index d7c6f56..442cf83 100644
    border: 0;
    box-sizing: border-box;
  }
-+/* добавляй отступы между блоками стилей ✅ */
++/* добавляй отступы между блоками стилей  */
  .wrapper {
    max-width: 90rem;
  }
@@ -42,7 +42,7 @@ index d7c6f56..442cf83 100644
    border-radius: var(--radius);
    cursor: pointer;
  }
-+/* мы можем в css использовать вложенность стилей как и в scss */
++/* мы можем в css использовать вложенность стилей как и в scss ✅ */
  .hero__btn:hover {
    transition: ease 0.8s;
    background-color: var(--color-dark);
@@ -67,12 +67,12 @@ index 72bdab0..b32089d 100644
 -          <button className='header__btn' aria-label="Inspiration">Inspiration</button>
 -          <button className='header__btn' aria-label="Contact us">Contact us</button>
 +    <div className="wrapper">
-+      {/* сделай header в виде компонента */}
++      {/* сделай header в виде компонента ✅ */}
 +      <header className="header">
 +        <nav className="header__left">
-+          {/* Используй ul и li для списка */}
-+          {/* сделай переиспользуемые кнопки в виде компонентов */}
-+          {/* используй css modules для стилей */}
++          {/* Используй ul и li для списка ✅*/}
++          {/* сделай переиспользуемые кнопки в виде компонентов ✅*/}
++          {/* используй css modules для стилей ✅*/}
 +          <button className="header__btn" aria-label="Discover LifeBlend">
 +            Discover LifeBlend
 +          </button>
@@ -101,7 +101,7 @@ index 72bdab0..b32089d 100644
 -            <h2 className='welcome__title'>
 -              Stay tuned,<br/> stay healthy
 +      <main className="main">
-+        {/* каждая секция должна быть в виде компонента */}
++        {/* каждая секция должна быть в виде компонента ✅*/}
 +        <section className="welcome">
 +          <img className="welcome__img" src="img/img1.jpg" alt="img1" />
 +          <div className="welcome__content">

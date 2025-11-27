@@ -11,7 +11,7 @@ export const InfoCard = ({ imageSrc, altText, title, description, buttonLabel })
             <p className={style.description}>
                 {description}
             </p>
-            <ArrowButton label={buttonLabel} variant="default" />
+            {buttonLabel && <ArrowButton label={buttonLabel} variant="default" />}
         </div>
     )
 }
