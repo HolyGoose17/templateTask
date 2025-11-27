@@ -9,6 +9,7 @@
 .image{
   max-width: 24.625rem;
   max-height: 13.875rem;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--radius);
 }

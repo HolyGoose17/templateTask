@@ -1,5 +1,5 @@
 import style from './Button.module.css';
-export const Button = ({label, variant = 'default'}) => {
+export const Button = ({label}) => {
     return (
         <button
         className={style.btn}

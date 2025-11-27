@@ -6,7 +6,6 @@ export const Benefits = () => {
           <h2 className="benefits__header">
             Discover a World of Inspiration and Resources on LifeBlend Hub
           </h2>
-          {/* Это тоже список где есть данные которые перебираются в цикле и отображается компонент BenefitsCard */}
           <div className="benefits__cards">
             <InfoCard 
             imageSrc='img/img5-1.jpg'

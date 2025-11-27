@@ -4,7 +4,7 @@ export const InfoSection = ({subTitle, title, description}) => {
         <div className={style.infoSection}>
             {subTitle && <p className={style.subTitle}>{subTitle}</p>}
             {title && <h2 className={style.title}>{title}</h2>}
-            {description && <p className={style.description}>{description}</p>}
+            {description && <span className={style.description}>{description}</span>}
         </div>
     )
 }

@@ -1,9 +1,9 @@
 import styles from './ArrowButton.module.css';
-export const ArrowButton = ({ label, onClick, variant = 'default' }) => {
+
+export const ArrowButton = ({ label}) => {
   return (
     <button
       className={styles.arrowText}
-      onClick={onClick}
       type="button"
       aria-label={label}
     >
