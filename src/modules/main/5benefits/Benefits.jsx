@@ -1,5 +1,6 @@
 import { InfoCard } from '../../../components/InfoCard/InfoCard'
 import './Benefits.css'
+
 export const Benefits = () => {
     return (
         <section className="benefits">

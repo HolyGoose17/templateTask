@@ -5,16 +5,27 @@
   gap: 5rem;
   background-color: var(--color-gray);
 }
+
 .proof__content {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
+
 .proof__stats {
   display: flex;
   gap: 1rem;
 }
+
 .proof__nav{
   display: flex;
   gap: 1rem;
+}
+
+.proof__img {
+  max-width: 37.5rem;
+  max-height: 37.5rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
 }

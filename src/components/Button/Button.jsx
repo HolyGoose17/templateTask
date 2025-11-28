@@ -1,4 +1,5 @@
 import style from './Button.module.css';
+
 export const Button = ({label}) => {
     return (
         <button

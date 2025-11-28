@@ -1,5 +1,6 @@
 import style from './HeaderButton.module.css';
-export const HeaderButton = ({label, variant = 'default'}) => {
+
+export const HeaderButton = ({label}) => {
     return (
         <button 
         className={style.headerButton} 

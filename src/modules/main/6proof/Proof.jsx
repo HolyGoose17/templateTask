@@ -9,9 +9,9 @@ export const Proof = () => {
         <section className="proof">
           <div className="proof__content">
             <InfoSection 
-            title="Discover the Impact of LifeBlend Hub with These Fascinating Statistics"
-            description="LifeBlend Hub has reached millions of users worldwide, providing valuable resources and inspiring content to enhance their modern lifestyles."
-            variant='lg' />
+              title="Discover the Impact of LifeBlend Hub with These Fascinating Statistics"
+              description="LifeBlend Hub has reached millions of users worldwide, providing valuable resources and inspiring content to enhance their modern lifestyles."
+              variant='lg' />
             <div className="proof__stats">
               <TextBlock  
               title="50%"

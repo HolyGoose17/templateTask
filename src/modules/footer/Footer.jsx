@@ -23,9 +23,10 @@ export const Footer = () => {
           description="Stay up to date on the latest features and releases by joining our newsletter."
           variant="sm" />
           <Form 
-          placeholder="Enter your email"
+          placeholder="Your email"
           buttonLabel="Subscribe"
-          description="By subscribing, you agree to our Privacy Policy and consent to receive updates from our company." />
+          description="By subscribing, you agree to our Privacy Policy and consent to receive updates from our company."
+          align="left" />
         </div>
         <div className="footer__right">
           <FooterList 

@@ -15,6 +15,7 @@ export const Newsletter = () => {
           placeholder="Enter your email"
           buttonLabel="Sign in"
           description="By clicking Sign Up, you agree to our Terms and Conditions." 
+          align='center'
           />
         </section>
     )

@@ -1,4 +1,5 @@
 import style from './InfoSection.module.css'
+
 export const InfoSection = ({subTitle, title, description, variant='sm', align = 'left'}) => {
     const alignClass = align === 'center' ? style.alignCenter : style.alignLeft;
     return (

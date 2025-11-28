@@ -1,5 +1,6 @@
 import { Button } from '../../../components/Button/Button'
 import '../1welcome/Welcome.css'
+
 export const Welcome = () => {
     return (
         <section className="welcome">
@@ -10,8 +11,7 @@ export const Welcome = () => {
             </h2>
             <div className="welcome__info">
               <p className="welcome__description">
-                Experience a comprehensive blend of content and resources to
-                enhance and inspire every facet of your lifestyle.
+                Experience a comprehensive blend of content and resources to enhance and inspire every facet of your lifestyle.
               </p>
               <div className="welcome__actions">
                 <Button label='Explore' variant="primary" />
