@@ -9,6 +9,7 @@ export const Newsletter = () => {
           title="Get the Latest LifeBlend Updates"
           description="Subscribe to our newsletter for regular updates on lifestyle trends and tips."
           variant='lg'
+          align='center'
           />
           <Form
           placeholder="Enter your email"

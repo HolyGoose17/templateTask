@@ -8,23 +8,27 @@
   gap: 5rem;
   background-color: var(--color-gray);
 }
+
 .hero__content {
   max-width: 37.5rem;
-  max-height: 38.75rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 2.5rem;
 }
+
 .hero__features {
   display: flex;
   gap: 1rem;
+  width: 100%;
 }
 
 .hero__action{
   display: flex;
+  gap: 1rem;
 }
+
 .hero_img{
   max-width: 37.5rem;
   max-height: 37.5rem;

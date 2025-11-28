@@ -36,25 +36,6 @@ export const Footer = () => {
           items={['Link one', 'Link two', 'Link three', 'Link four', 'Link five']} />
           <FooterMedia 
           platforms={socialPlatforms} />
-          {/* <ul className="footer__ul">
-            <h2 className="footer__ul_title">Follow us</h2>
-            <li className="footer__media_block">
-              <CiFacebook className='footer_img' />
-              <span className="footer_li">Facebook</span>
-            </li>
-            <li className="footer__media_block">
-              <FaInstagram className='footer_img' />
-              <span className="footer_li">Instagram</span>
-            </li>
-            <li className="footer__media_block">
-              <CiLinkedin className='footer_img' />
-              <span className="footer_li">Linkedin</span>
-            </li>
-            <li className="footer__media_block">
-              <FaYoutube className='footer_img' />
-              <span className="footer_li">Youtube</span>
-            </li>
-          </ul> */}
         </div>
       </footer>
     )
