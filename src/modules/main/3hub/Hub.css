@@ -1,9 +1,10 @@
 .hub {
-  width: 100%;
+  margin-top: 2rem;
   max-height: 85.875rem;
   padding: 5.625rem 5rem;
   display: flex;
   flex-direction: column;
+  /* gap: 5rem; */
 }
 
 .hub__cards {
@@ -15,4 +16,20 @@
 .hub_btns {
   margin-top: 4.625rem;
   display: flex;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hub{
+    align-items: center;
+    margin-top: 0;
+    padding: 2.5rem 2rem;
+  }
+
+  .hub__cards{
+    margin-top: 2.5rem;
+  }
+
+  .hub_btns{
+    margin-top: 2.25rem;
+  }
 }

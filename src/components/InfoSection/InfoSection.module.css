@@ -45,3 +45,19 @@
   font-weight: 400;
   line-height: 160%;
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .infoSection{
+    width: 85%;
+    text-align: center;
+  }
+  .title.sm{
+    font-size: 1.5rem;
+  }
+  .title.lg{
+    font-size: 2rem;
+  }
+  .alignLeft{
+    align-items: center;
+    text-align: center;
+  }
+}

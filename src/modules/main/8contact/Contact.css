@@ -17,6 +17,12 @@
   gap: 3rem;
 }
 
+.contact__cards{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
 .contact__block {
   max-width: 37.5rem;
   max-height: 40.625rem;
@@ -30,4 +36,29 @@
   aspect-ratio: 1 / 0.75;
   border-radius: var(--radius);
   object-fit: cover;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contact {
+    margin-top: 0;
+    padding: 2.75rem 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .contact__content{
+    align-items: center;
+  }
+
+  .contact__cards{
+    width: 85%;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .contact__block {
+    height: 208px;
+  }
 }

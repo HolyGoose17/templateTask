@@ -15,7 +15,8 @@ export const Contact = () => {
             title="Contact LifeBlend"
             description="Have a question or need assistance? We're here to help!" 
             variant='lg' />
-          <ContactCard 
+          <div className='contact__cards'>
+            <ContactCard 
             icon={HiOutlineMailOpen} 
             title="Email"
             subtitle="Send us an email"
@@ -30,6 +31,7 @@ export const Contact = () => {
             title="Office"
             subtitle="123 Main St, Anytown, USA"
             detail="Get Directions >" />
+          </div>
         </div>
         <div className="contact__block">
           <img className="contact_img" src="img/image7.jpg" alt="img" />

@@ -1,10 +1,8 @@
 .hero {
-  height: 100%;
-  min-height: 51.5rem;
+  margin-top: 2rem;
   padding: 5.625rem 5rem;
   position: relative;
   display: flex;
-  align-items: center;
   gap: 5rem;
   background-color: var(--color-gray);
 }
@@ -13,7 +11,7 @@
   max-width: 37.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: flex-start;
   gap: 2.5rem;
 }
@@ -26,13 +24,32 @@
 
 .hero__action{
   display: flex;
-  gap: 1rem;
 }
 
 .hero_img{
-  max-width: 37.5rem;
-  max-height: 37.5rem;
+  max-width: 47%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--radius);
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero{
+    padding: 2.5rem 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .hero__content{
+    align-items: center;
+  }
+
+  .hero__features{
+    width: 85%;
+  }
+
+  .hero_img{
+    max-width: 85%;
+  }
 }

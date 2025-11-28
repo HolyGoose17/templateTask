@@ -9,6 +9,7 @@
   width: 50%;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 3rem;
 }
 .footer_head {
@@ -85,4 +86,27 @@
 .footer_img {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  .footer__left {
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+    gap: 1.5rem;
+  }
+  .footer__right {
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
+    flex-wrap: wrap;
+  }
 }

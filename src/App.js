@@ -11,13 +11,11 @@ import { Proof } from "./modules/main/6proof/Proof";
 import { Contact } from "./modules/main/8contact/Contact";
 
 
-function App() {
+export function App() {
   return (  
     <div className="wrapper">
-      {/* сделай header в виде компонента */}
       <Header/>
       <main className="main">
-        {/* каждая секция должна быть в виде компонента */}
         <Welcome/>
         <Hero/>
         <Hub/>
@@ -32,5 +30,3 @@ function App() {
   );
 }
 
-// не экспортируй по дефолту, экспортируй по имени App
-export default App;
