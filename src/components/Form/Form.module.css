@@ -5,11 +5,13 @@
   gap: 1rem;
   text-align: center;
 }
+
 .nav {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
+
 .input {
   flex-grow: 1;
   max-width: 23.3125rem;
