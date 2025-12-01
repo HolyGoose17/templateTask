@@ -1,6 +1,5 @@
 .contact {
   background-color: var(--color-gray);
-  /* margin-top: 2.125rem; */
   padding: 5.625rem 5rem;
   display: flex;
   justify-content: space-between;
@@ -64,8 +63,13 @@
   }
 }
 
-@media (max-width:425px) {
+/* @media (max-width:768px) {
   .contact__block{
     height: 48px;
+  }
+} */
+@media (max-width:425px) {
+  .contact__block{
+    height: 0px;
   }
 }

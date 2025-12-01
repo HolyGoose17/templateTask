@@ -1,8 +1,6 @@
 .proof {
-  /* margin-top: 1rem; */
   padding: 5.625rem 5rem;
   display: flex;
-  /* flex-wrap: wrap; */
   gap: 5rem;
   background-color: var(--color-gray);
 }

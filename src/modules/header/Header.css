@@ -42,6 +42,13 @@
         border: none;
     }
 
+    .header_txt{
+      font-family: var(--font-family-title);
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 160%;
+    }
+
     .header_btn{
         background-color: inherit;
     }

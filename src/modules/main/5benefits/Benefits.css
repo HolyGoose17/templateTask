@@ -1,6 +1,5 @@
 .benefits {
   min-height: 54.6875rem;
-  /* margin-top: 3rem; */
   padding: 5.625rem 5rem;
   display: flex;
   flex-direction: column;
@@ -36,7 +35,7 @@
   
   .benefits__header{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .benefits__cards{
     justify-content: center;
