@@ -1,6 +1,6 @@
 .benefits {
   min-height: 54.6875rem;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   padding: 5.625rem 5rem;
   display: flex;
   flex-direction: column;
@@ -19,19 +19,19 @@
 }
 
 .benefits__cards {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   gap: 3rem;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 0px) and (max-width: 1024px) {
   .benefits{
     min-height: 100vh;
     margin-top: 0;
     padding: 2.5rem 2rem;
     display: flex;
     justify-content: space-evenly;
-    gap: 0;
+    gap: 2rem;
   }
   
   .benefits__header{

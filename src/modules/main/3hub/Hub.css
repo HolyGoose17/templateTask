@@ -1,6 +1,6 @@
 .hub {
   margin-top: 2rem;
-  max-height: 85.875rem;
+  /* max-height: 85.875rem; */
   padding: 5.625rem 5rem;
   display: flex;
   flex-direction: column;
@@ -9,6 +9,7 @@
 
 .hub__cards {
   margin-top: 5.5rem;
+  max-width: 100%;
   display: flex;
   gap: 3rem;
 }
@@ -18,7 +19,7 @@
   display: flex;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 0px) and (max-width: 1024px) {
   .hub{
     align-items: center;
     margin-top: 0;
@@ -27,9 +28,17 @@
 
   .hub__cards{
     margin-top: 2.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .hub_btns{
     margin-top: 2.25rem;
   }
 }
+
+/* @media (max-width:768px) {
+  .hub__cards{
+    flex-wrap: wrap;
+  }
+} */

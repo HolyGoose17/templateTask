@@ -25,7 +25,7 @@
   margin-right: 0.5rem;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 0px) and (max-width: 1024px) {
   .li{
     display: flex;
     align-items: center;

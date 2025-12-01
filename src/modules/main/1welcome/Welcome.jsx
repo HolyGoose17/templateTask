@@ -4,7 +4,7 @@ import '../1welcome/Welcome.css'
 export const Welcome = () => {
     return (
         <section className="welcome">
-          <img className="welcome__img" src="/img/img1.jpg" alt="img1" fetchPriority="high" />
+          <img className="welcome__img" src="/img/test.jpg" alt="img1" fetchPriority="high" />
           <div className="welcome__content">
             <h2 className="welcome__title">
               Stay tuned, stay healthy

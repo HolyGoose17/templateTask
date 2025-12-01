@@ -1,5 +1,5 @@
 .intro {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   padding: 5.625rem 5rem;
   display: flex;
   gap: 5rem;
@@ -8,7 +8,7 @@
 
 .intro__container {
   max-width: 37.5rem;
-  margin-top: 3.125rem;
+  /* margin-top: 3.125rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +27,7 @@
   border-radius: var(--radius);
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 0px) and (max-width: 1024px) {
   .intro{
     margin-top: 0;
     padding: 2.5rem 2rem;

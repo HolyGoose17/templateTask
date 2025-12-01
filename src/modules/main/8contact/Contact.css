@@ -1,6 +1,6 @@
 .contact {
   background-color: var(--color-gray);
-  margin-top: 2.125rem;
+  /* margin-top: 2.125rem; */
   padding: 5.625rem 5rem;
   display: flex;
   justify-content: space-between;
@@ -38,7 +38,7 @@
   object-fit: cover;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 0px) and (max-width: 1024px) {
   .contact {
     margin-top: 0;
     padding: 2.75rem 2rem;
@@ -56,9 +56,16 @@
     width: 85%;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .contact__block {
     height: 208px;
+  }
+}
+
+@media (max-width:425px) {
+  .contact__block{
+    height: 48px;
   }
 }

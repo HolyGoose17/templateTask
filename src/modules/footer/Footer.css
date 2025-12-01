@@ -1,5 +1,5 @@
 .footer {
-  padding: 5.625rem 5rem;
+  padding: 9.625rem 5rem;
   background-color: var(--color-gray);
   display: flex;
   gap: 5rem;
@@ -88,7 +88,7 @@
   height: 1.5rem;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 0px) and (max-width: 1024px) {
   .footer {
     padding: 2rem;
     display: flex;
@@ -108,5 +108,7 @@
     width: 100%;
     margin-top: 0;
     flex-wrap: wrap;
+    align-items: center;
+    gap: 2.125rem;
   }
 }

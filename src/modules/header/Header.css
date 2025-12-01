@@ -1,3 +1,7 @@
+.header_hidden{
+    display: none;
+}
+
 .header {
     max-width: 90rem; 
     max-height: 4.25rem;
@@ -26,3 +30,32 @@
     justify-content: flex-end;
     width: 14rem;
 }
+
+@media (max-width:768px) {
+    .header_hidden{
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0.5rem;
+        font-size: 1rem;
+        color: var(--color-dark);
+        background-color: white;
+        border: none;
+    }
+
+    .header_btn{
+        background-color: inherit;
+    }
+
+    .header{
+        display: none;
+        position: fixed;
+        z-index: 10;
+        background-color: rgba(241, 222, 222, 0.8);
+        color: cadetblue;
+    }
+
+    .header.header--active {
+        display: flex;
+    }
+}
+
