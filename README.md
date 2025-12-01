@@ -1,3 +1,43 @@
+RU Description
+
+https://github.com/HolyGoose17/templateTask
+
+SPA веб-приложение для популяризации и привлечения клиентов в сферу Здорового Образа Жизни. Имеется модульная структура(цифровое значение папок отражает их порядок отображения в файле App.js) с переиспользуемыми компонентами. 
+
+
+Установка и запуск:
+    1. Установить зависимости
+        npm install
+    
+    2. Запустить приложение в режиме разработчика
+        npm start
+
+    3. Открыть http://localhost:3000 в браузере.
+
+
+Сборка
+
+    npm run build
+
+Создаёт оптимизированную production-сборку в папке build.
+
+
+Технологии
+    React
+
+    JavaScript (ES6+)
+
+    CSS Modules / SCSS (если используется)
+
+    Create React App
+
+
+EN Description
+
+https://github.com/HolyGoose17/templateTask
+
+A web application for promoting and attracting customers to the Healthy Lifestyle industry. It features a modular structure (the folders are assigned a digital value, reflecting their display order in the App.js file) with reusable components.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
