@@ -28,7 +28,6 @@
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    width: 14rem;
 }
 
 @media (max-width:768px) {
@@ -54,15 +53,38 @@
     }
 
     .header{
+        width: 100%;
+        padding: 0;
         display: none;
-        position: fixed;
+        position: absolute;
         z-index: 10;
         background-color: rgba(241, 222, 222, 0.8);
-        color: cadetblue;
     }
 
     .header.header--active {
         display: flex;
+    }
+
+    .header__left {
+        padding: 0;
+        margin: 0.625rem;
+        gap: 1.2rem;
+    }
+
+    .header__right {
+        margin: 0.625rem;
+    }
+}
+
+@media (max-width:514px) {
+    .header.header--active {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .header__right {
+        margin: 0;
+        margin-bottom: 1rem;
     }
 }
 

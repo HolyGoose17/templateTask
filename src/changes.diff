@@ -1,0 +1,1164 @@
+diff --git a/changes.diff b/changes.diff
+index 30cf268..e69de29 100644
+--- a/changes.diff
++++ b/changes.diff
+@@ -1,681 +0,0 @@
+-diff --git a/src/App.css b/src/App.css
+-index d7c6f56..442cf83 100644
+---- a/src/App.css
+-+++ b/src/App.css
+-@@ -1,6 +1,7 @@
+- /* <---------------------------------- FONTS ----------------------------------> */
+- @font-face {
+-   font-family: 'Inter';
+-+  /* шрифты положи в public чтобы они не были в основном бандле css ✅ */
+-   src: url('./assets/fonts/Inter24pt-Regular.woff2') format('woff2');
+-   font-weight: 400;
+-   font-style: normal;
+-@@ -50,6 +51,8 @@
+- 
+-   --radius: 8px;
+- 
+-+  /* добавь переменные для шрифтов и для sizes ✅ */
+-+
+-   --font-family-accent: 'Inter', 'sans-serif';
+-   --font-family-title: 'Montserrat', 'sans-serif';
+-   --font-family-base: 'Poppins', 'sans-serif';
+-@@ -62,6 +65,7 @@
+-   border: 0;
+-   box-sizing: border-box;
+- }
+-+/* добавляй отступы между блоками стилей  */
+- .wrapper {
+-   max-width: 90rem;
+- }
+-@@ -76,7 +80,9 @@
+-   border: 1px solid black;
+- }
+- .header {
+--  width: 90rem;
+-+  /* не используй жестко заданные размеры (width, height) используй padding, margin, max-width, min-width, max-height, min-height ✅ */
+-+  /* актуально для всех блоков ✅ */
+-+  width: 90rem; 
+-   height: 4.25rem;
+-   padding: 0.875rem 1.5rem;
+-   background-color: var(--color-light);
+-@@ -266,6 +272,7 @@
+-   border-radius: var(--radius);
+-   cursor: pointer;
+- }
+-+/* мы можем в css использовать вложенность стилей как и в scss ✅ */
+- .hero__btn:hover {
+-   transition: ease 0.8s;
+-   background-color: var(--color-dark);
+-diff --git a/src/App.js b/src/App.js
+-index 72bdab0..b32089d 100644
+---- a/src/App.js
+-+++ b/src/App.js
+-@@ -5,304 +5,392 @@ import { CiFacebook } from "react-icons/ci";
+- import { FaInstagram } from "react-icons/fa";
+- import { CiLinkedin } from "react-icons/ci";
+- import { FaYoutube } from "react-icons/fa";
+--import './App.css';
+-+import "./App.css";
+- 
+- function App() {
+-   return (
+--    <div className='wrapper'>
+--      <header className='header'>
+--        <nav className='header__left'>
+--          <button className='header__btn' aria-label="Discover LifeBlend">Discover LifeBlend</button>
+--          <button className='header__btn' aria-label="Explore">Explore</button>
+--          <button className='header__btn' aria-label="Inspiration">Inspiration</button>
+--          <button className='header__btn' aria-label="Contact us">Contact us</button>
+-+    <div className="wrapper">
+-+      {/* сделай header в виде компонента ✅ */}
+-+      <header className="header">
+-+        <nav className="header__left">
+-+          {/* Используй ul и li для списка ✅*/}
+-+          {/* сделай переиспользуемые кнопки в виде компонентов ✅*/}
+-+          {/* используй css modules для стилей ✅*/}
+-+          <button className="header__btn" aria-label="Discover LifeBlend">
+-+            Discover LifeBlend
+-+          </button>
+-+          <button className="header__btn" aria-label="Explore">
+-+            Explore
+-+          </button>
+-+          <button className="header__btn" aria-label="Inspiration">
+-+            Inspiration
+-+          </button>
+-+          <button className="header__btn" aria-label="Contact us">
+-+            Contact us
+-+          </button>
+-         </nav>
+--        <nav className='header__right'>
+--          <button className='header__right_btn btn' aria-label="Contact us">Contact us</button>
+-+        <nav className="header__right">
+-+          <button className="header__right_btn btn" aria-label="Contact us">
+-+            Contact us
+-+          </button>
+-         </nav>
+-       </header>
+--      <main className='main'>
+--        <section className='welcome'>
+--          <img className='welcome__img' src='img/img1.jpg' alt='img1' />
+--          <div className='welcome__content'>
+--            <h2 className='welcome__title'>
+--              Stay tuned,<br/> stay healthy
+-+      <main className="main">
+-+        {/* каждая секция должна быть в виде компонента ✅*/}
+-+        <section className="welcome">
+-+          <img className="welcome__img" src="img/img1.jpg" alt="img1" />
+-+          <div className="welcome__content">
+-+            <h2 className="welcome__title">
+-+              Stay tuned,
+-+              <br /> stay healthy
+-             </h2>
+--            <div className='welcome__info'>
+--              <p className='welcome__description'>
+--                Experience a comprehensive blend of content and resources to enhance and inspire every facet of your lifestyle.
+-+            <div className="welcome__info">
+-+              <p className="welcome__description">
+-+                Experience a comprehensive blend of content and resources to
+-+                enhance and inspire every facet of your lifestyle.
+-               </p>
+--              <div className='welcome__actions'>
+--                <button className='welcome__btn btn' aria-label="Explore">Explore</button>
+--                <button className='welcome__btn btn' aria-label="Sign Up">Sign Up</button>
+-+              <div className="welcome__actions">
+-+                <button className="welcome__btn btn" aria-label="Explore">
+-+                  Explore
+-+                </button>
+-+                <button className="welcome__btn btn" aria-label="Sign Up">
+-+                  Sign Up
+-+                </button>
+-               </div>
+-             </div>
+-           </div>
+-         </section>
+--        <section className='hero'>
+--          <div className='hero__content'>
+--            <div className='hero__lifeStyle'>
+--              <h4 className='hero__moto'>
+--                Revolutionize
+--              </h4>
+--              <h2 className='hero__title'>
+--                Discover a New Way of Living
+--              </h2>
+--              <p className='hero__desc'>
+--                LifeBlend Hub offers a unique and comprehensive approach to modern living. With a curated blend of content and resources, we aim to enhance and inspire every facet of your lifestyle.
+-+        <section className="hero">
+-+          <div className="hero__content">
+-+            <div className="hero__lifeStyle">
+-+              {/* не думаю что логично отображать h4 перед h2, лучше просто p или span */}
+-+              <h4 className="hero__moto">Revolutionize</h4>
+-+              <h2 className="hero__title">Discover a New Way of Living</h2>
+-+              <p className="hero__desc">
+-+                LifeBlend Hub offers a unique and comprehensive approach to
+-+                modern living. With a curated blend of content and resources, we
+-+                aim to enhance and inspire every facet of your lifestyle.
+-               </p>
+-             </div>
+--            <div className='hero__features'>
+--              <div className='hero__feature'> 
+--                  <div className='hero__feature__title'>
+--                    Explore More
+--                  </div>
+--                  <div className='hero__feature__desc'>
+--                    Unlock your potential with our diverse range of articles, guides, and tools.
+--                  </div>
+--              </div>
+--              <div className='hero__feature'>
+--                <div className='hero__feature__title'>
+--                  Get Inspired
+-+            <div className="hero__features">
+-+              {/* используй ul и li для списка */}
+-+              {/* используй один компонент для списка */}
+-+              {/* у 3 секций заголовок и описание одинаковые, лучше использовать один компонент для каждой секции */}
+-+              <div className="hero__feature">
+-+                <div className="hero__feature__title">Explore More</div>
+-+                <div className="hero__feature__desc">
+-+                  Unlock your potential with our diverse range of articles,
+-+                  guides, and tools.
+-                 </div>
+--                <div className='hero__feature__desc'>
+--                  Discover stories of transformation and success from our vibrant community.
+-+              </div>
+-+              <div className="hero__feature">
+-+                <div className="hero__feature__title">Get Inspired</div>
+-+                <div className="hero__feature__desc">
+-+                  Discover stories of transformation and success from our
+-+                  vibrant community.
+-                 </div>
+-               </div>
+-             </div>
+--            <div className='hero__action'>
+--              <button className='hero__btn' aria-label="Learn more">Learn more</button>
+--              <button className='hero__btn__arrow' aria-label="Sign Up">Sign Up {'>'}</button>
+-+            <div className="hero__action">
+-+              <button className="hero__btn" aria-label="Learn more">
+-+                Learn more
+-+              </button>
+-+              <button className="hero__btn__arrow" aria-label="Sign Up">
+-+                Sign Up {">"}
+-+              </button>
+-             </div>
+-           </div>
+--            <div className='hero_img'>
+--              <img src='img/img2.jpg' alt='img2' />
+--            </div>
+-+          <div className="hero_img">
+-+            <img src="img/img2.jpg" alt="img2" />
+-+          </div>
+-         </section>
+--        <section className='hub'>
+--          <div className='hub__content'>
+--            <h4 className='hub__moto'>
+--              Discover
+--            </h4>
+--            <h2 className='hub__head'>
+--              Unlock the Power of LifeBlend Hub
+--            </h2>
+--            <p className='hub__body'>
+--              LifeBlend Hub is your one-stop destination for all things related to health, productivity, leisure, and personal growth. Explore our comprehensive blend of content and resources to enhance and inspire every facet of your lifestyle.
+-+        <section className="hub">
+-+          <div className="hub__content">
+-+            <h4 className="hub__moto">Discover</h4>
+-+            <h2 className="hub__head">Unlock the Power of LifeBlend Hub</h2>
+-+            <p className="hub__body">
+-+              LifeBlend Hub is your one-stop destination for all things related
+-+              to health, productivity, leisure, and personal growth. Explore our
+-+              comprehensive blend of content and resources to enhance and
+-+              inspire every facet of your lifestyle.
+-             </p>
+-           </div>
+--          <div className='hub__cards'>
+--            <div className='hub__card'>
+--              <img className='hub__img' src='img/img3-1.jpg' alt='img2-1' />
+--              <h2 className='hub__title'>
+--                Health and Wellness
+--              </h2>
+--              <p className='hub__desc'>
+--                Discover expert advice and tips on maintaining a healthy lifestyle.
+-+          <div className="hub__cards">
+-+            {/* Создай компонент HubCard */}
+-+            <div className="hub__card">
+-+              <img className="hub__img" src="img/img3-1.jpg" alt="img2-1" />
+-+              <h2 className="hub__title">Health and Wellness</h2>
+-+              <p className="hub__desc">
+-+                Discover expert advice and tips on maintaining a healthy
+-+                lifestyle.
+-               </p>
+-             </div>
+--            <div className='hub__card'>
+--              <img className='hub__img' src='img/img3-2.jpg' alt='img3-2' />
+--              <h2 className='hub__title'>
+--                Boost Your Productivity
+--              </h2>
+--              <p className='hub__desc'>
+--                Learn effective strategies to maximize your productivity and achieve your goals.
+-+            <div className="hub__card">
+-+              <img className="hub__img" src="img/img3-2.jpg" alt="img3-2" />
+-+              <h2 className="hub__title">Boost Your Productivity</h2>
+-+              <p className="hub__desc">
+-+                Learn effective strategies to maximize your productivity and
+-+                achieve your goals.
+-               </p>
+-             </div>
+--            <div className='hub__card'>
+--              <img className='hub__img' src='img/img3-3.jpg' alt='img3-3' />
+--              <h2 className='hub__title'>
+--                Find Joy in Leisure
+--              </h2>
+--              <p className='hub__desc'>
+--                Discover exciting activities and hobbies to make the most of your leisure time.
+-+            <div className="hub__card">
+-+              <img className="hub__img" src="img/img3-3.jpg" alt="img3-3" />
+-+              <h2 className="hub__title">Find Joy in Leisure</h2>
+-+              <p className="hub__desc">
+-+                Discover exciting activities and hobbies to make the most of
+-+                your leisure time.
+-               </p>
+-             </div>
+-           </div>
+--          <div className='hub_btns'>
+--            <button className='btn hub__btn' aria-label="Join">Join</button>
+--            <button className='hub__btn__arrow' aria-label="Learn More">Learn more {'>'}</button>
+-+          {/* Такие же кнопки в еще 3 блоках, создай переиспользуемый компонент */}
+-+          <div className="hub_btns">
+-+            <button className="btn hub__btn" aria-label="Join">
+-+              Join
+-+            </button>
+-+            <button className="hub__btn__arrow" aria-label="Learn More">
+-+              Learn more {">"}
+-+            </button>
+-           </div>
+-         </section>
+--        <section className='intro'>
+--          <div className='intro__container'>
+--            <div className='intro__text'>
+--              <h4 className='intro__moto'>
+--                Discover
+--              </h4>
+--              <h2 className='intro__title'>
+-+        <section className="intro">
+-+          <div className="intro__container">
+-+            <div className="intro__text">
+-+              <h4 className="intro__moto">Discover</h4>
+-+              <h2 className="intro__title">
+-                 Unlock the Secrets to a Balanced Lifestyle
+-               </h2>
+--              <p className='intro__desc'>
+--                LifeBlend Hub provides a comprehensive blend of content and resources to help you achieve balance in every aspect of your life. From wellness tips and personal development strategies to home organization hacks and travel inspiration, we've got you covered.
+-+              <p className="intro__desc">
+-+                LifeBlend Hub provides a comprehensive blend of content and
+-+                resources to help you achieve balance in every aspect of your
+-+                life. From wellness tips and personal development strategies to
+-+                home organization hacks and travel inspiration, we've got you
+-+                covered.
+-               </p>
+-             </div>
+--            <div className='intro__btns'>
+--              <button className='btn intro__btn' aria-label="Learn More">
+-+            <div className="intro__btns">
+-+              <button className="btn intro__btn" aria-label="Learn More">
+-                 Learn more
+-               </button>
+--              <button className='intro__btn_arrow' aria-label="Sign Up">
+--                Sign Up<span>{'>'}</span>
+-+              <button className="intro__btn_arrow" aria-label="Sign Up">
+-+                Sign Up<span>{">"}</span>
+-               </button>
+-             </div>
+-           </div>
+--          <img className='intro__img' src='img/img4.jpg' alt='cyclist' />
+-+          <img className="intro__img" src="img/img4.jpg" alt="cyclist" />
+-         </section>
+--        <section className='benefits'>
+--          <h2 className='benefits__header'>
+--            Discover a World of Inspiration and<br/> Resources on LifeBlend Hub
+-+        <section className="benefits">
+-+          <h2 className="benefits__header">
+-+            Discover a World of Inspiration and
+-+            <br /> Resources on LifeBlend Hub
+-           </h2>
+--          <div className='benefits__cards'>
+--            <div className='benefits__card'>
+--              <img className='benefits__img' src='img/img5-1.jpg' alt='img5' />
+--              <h4 className='benefits__title'>
+--                Unlock Your Full Potential with LifeBlend Hub's Comprehensive Content
+-+          {/* Это тоже список где есть данные которые перебираются в цикле и отображается компонент BenefitsCard */}
+-+          <div className="benefits__cards">
+-+            <div className="benefits__card">
+-+              <img className="benefits__img" src="img/img5-1.jpg" alt="img5" />
+-+              <h4 className="benefits__title">
+-+                Unlock Your Full Potential with LifeBlend Hub's Comprehensive
+-+                Content
+-               </h4>
+--              <p className='benefits__desc'>
+--                Engage with our curated content and resources to enhance every aspect of your lifestyle.
+-+              <p className="benefits__desc">
+-+                Engage with our curated content and resources to enhance every
+-+                aspect of your lifestyle.
+-               </p>
+--              <button className='benefits__btn_arrow' aria-label="Explore">Explore <span>{'>'}</span></button>
+-+              <button className="benefits__btn_arrow" aria-label="Explore">
+-+                Explore <span>{">"}</span>
+-+              </button>
+-             </div>
+--            <div className='benefits__card'>
+--              <img className='benefits__img' src='img/img5-2.jpg' alt='img5' />
+--              <h4 className='benefits__title'>
+--                Stay Informed and Inspired with LifeBlend Hub's Diverse Content Content
+-+            <div className="benefits__card">
+-+              <img className="benefits__img" src="img/img5-2.jpg" alt="img5" />
+-+              <h4 className="benefits__title">
+-+                Stay Informed and Inspired with LifeBlend Hub's Diverse Content
+-+                Content
+-               </h4>
+--              <p className='benefits__desc'>
+--                Access our extensive collection of articles, videos, and guides to enrich your daily life.
+-+              <p className="benefits__desc">
+-+                Access our extensive collection of articles, videos, and guides
+-+                to enrich your daily life.
+-               </p>
+--              <button className='benefits__btn_arrow' aria-label="Discover">Discover <span>{'>'}</span></button>
+-+              <button className="benefits__btn_arrow" aria-label="Discover">
+-+                Discover <span>{">"}</span>
+-+              </button>
+-             </div>
+--            <div className='benefits__card'>
+--              <img className='benefits__img' src='img/img5-3.jpg' alt='img5' />
+--              <h4 className='benefits__title'>
+--                Transform Your Lifestyle with LifeBlend Hub's Expertly Curated Resources
+-+            <div className="benefits__card">
+-+              <img className="benefits__img" src="img/img5-3.jpg" alt="img5" />
+-+              <h4 className="benefits__title">
+-+                Transform Your Lifestyle with LifeBlend Hub's Expertly Curated
+-+                Resources
+-               </h4>
+--              <p className='benefits__desc'>
+--                Find the tools and resources you need to achieve your goals and live your best life.
+-+              <p className="benefits__desc">
+-+                Find the tools and resources you need to achieve your goals and
+-+                live your best life.
+-               </p>
+--              <button className='benefits__btn_arrow' aria-label="Get Started">Get Started<span>{'>'}</span></button>
+-+              <button className="benefits__btn_arrow" aria-label="Get Started">
+-+                Get Started<span>{">"}</span>
+-+              </button>
+-             </div>
+-           </div>
+-         </section>
+--        <section className='proof'>
+--          <div className='proof__content'>
+--            <div className='proof__head'>
+--              <h2 className='proof__title'>
+--                Discover the Impact of LifeBlend Hub with These Fascinating Statistics
+-+        <section className="proof">
+-+          <div className="proof__content">
+-+            <div className="proof__head">
+-+              {/* Такой же заголовок как и везде но к примеру пропс subTitle опциональный и здесь он отсутствует */}
+-+              <h2 className="proof__title">
+-+                Discover the Impact of LifeBlend Hub with These Fascinating
+-+                Statistics
+-               </h2>
+--              <p className='proof__desc'>
+--                LifeBlend Hub has reached millions of users worldwide, providing valuable resources and inspiring content to enhance their modern lifestyles.
+-+              <p className="proof__desc">
+-+                LifeBlend Hub has reached millions of users worldwide, providing
+-+                valuable resources and inspiring content to enhance their modern
+-+                lifestyles.
+-               </p>
+-             </div>
+--            <div className='proof__stats'>
+--              <div className='proof__card'>
+--                <h2 className='proof__percent'>
+--                  50%
+--                </h2>
+--                <p className='proof__details'>
+--                  Users report improved well-being and satisfaction with LifeBlend Hub.
+-+            <div className="proof__stats">
+-+              {/* список с переиспользуемым компонентом */}
+-+              <div className="proof__card">
+-+                <h2 className="proof__percent">50%</h2>
+-+                <p className="proof__details">
+-+                  Users report improved well-being and satisfaction with
+-+                  LifeBlend Hub.
+-                 </p>
+-               </div>
+--              <div className='proof__card'>
+--                <h2 className='proof__percent'>
+--                  50%
+--                </h2>
+--                <p className='proof__details'>
+-+              <div className="proof__card">
+-+                <h2 className="proof__percent">50%</h2>
+-+                <p className="proof__details">
+-                   LifeBlend Hub has become an essential part of users' lives.
+-                 </p>
+-               </div>
+-             </div>
+--            <div className='proof__nav'>
+--              <button className='proof__btn' aria-label="Learn More">
+-+            <div className="proof__nav">
+-+              <button className="proof__btn" aria-label="Learn More">
+-                 Learn more
+-               </button>
+--              <button className='proof__btn__arrow' aria-label="Sign Up">
+-+              <button className="proof__btn__arrow" aria-label="Sign Up">
+-                 Sign Up
+--                <span>{'>'}</span>
+-+                <span>{">"}</span>
+-               </button>
+-             </div>
+-           </div>
+--          <img className='proof__img' src='img/img6.jpg' alt='runners' />
+-+          <img className="proof__img" src="img/img6.jpg" alt="runners" />
+-         </section>
+--        <section className='newsletter'>
+--          <div className='newsletter__text'>
+--            <h2 className='newsletter__title'>Get the Latest LifeBlend Updates</h2>
+--            <p className='newsletter__desc'>Subscribe to our newsletter for regular updates on lifestyle trends and tips.</p>
+-+        <section className="newsletter">
+-+          <div className="newsletter__text">
+-+            <h2 className="newsletter__title">
+-+              Get the Latest LifeBlend Updates
+-+            </h2>
+-+            <p className="newsletter__desc">
+-+              Subscribe to our newsletter for regular updates on lifestyle
+-+              trends and tips.
+-+            </p>
+-           </div>
+--          <div className='newsletter__form'>
+--            <div className='newsletter__nav'>
+--              <input className='newsletter__inp' type='email' placeholder='Enter your email' name='email' />
+--              <button className='newsletter__btn' aria-label="Sign In">Sign in</button>
+-+          <div className="newsletter__form">
+-+            {/* Создай компонент где будет тег form и внутри него будет input и button */}
+-+            <div className="newsletter__nav">
+-+              <input
+-+                className="newsletter__inp"
+-+                type="email"
+-+                placeholder="Enter your email"
+-+                name="email"
+-+              />
+-+              <button className="newsletter__btn" aria-label="Sign In">
+-+                Sign in
+-+              </button>
+-             </div>
+--            <p className='newsletter__details'>By clicking Sign Up, you agree to our Terms and Conditions.</p>
+-+            <p className="newsletter__details">
+-+              By clicking Sign Up, you agree to our Terms and Conditions.
+-+            </p>
+-           </div>
+-         </section>
+--        <section className='contact'>
+--          <div className='contact__content'>
+--            <div className='contact__head'>
+--              <h4 className='contact_desc'>Connect</h4>
+--              <h2 className='contact_title'>Contact LifeBlend</h2>
+--              <p className='contact_details'>Have a question or need assistance? We're here to help!</p>
+-+        <section className="contact">
+-+          <div className="contact__content">
+-+            <div className="contact__head">
+-+              <h4 className="contact_desc">Connect</h4>
+-+              <h2 className="contact_title">Contact LifeBlend</h2>
+-+              <p className="contact_details">
+-+                Have a question or need assistance? We're here to help!
+-+              </p>
+-             </div>
+--            <div className='contact__card'>
+--              <HiOutlineMailOpen className="contact__card_img" aria-label="Email" />
+--              <h3 className='contact_type'>Email</h3>
+--              <p className='contact_text'>Send us an email</p>
+--              <p className='contact_text'>hello@lifeblendhub.com</p>
+-+            {/* список с переиспользуемым компонентом */}
+-+            <div className="contact__card">
+-+              <HiOutlineMailOpen
+-+                className="contact__card_img"
+-+                aria-label="Email"
+-+              />
+-+              <h3 className="contact_type">Email</h3>
+-+              <p className="contact_text">Send us an email</p>
+-+              <p className="contact_text">hello@lifeblendhub.com</p>
+-             </div>
+--            <div className='contact__card'>
+--              <MdOutlinePhone className="contact__card_img" aria-label="Phone" />
+--              <h3 className='contact_type'>Phone</h3>
+--              <p className='contact_text'>Give us a call</p>
+--              <p className='contact_text'>+1 (555) 123-4567</p>
+-+            <div className="contact__card">
+-+              <MdOutlinePhone
+-+                className="contact__card_img"
+-+                aria-label="Phone"
+-+              />
+-+              <h3 className="contact_type">Phone</h3>
+-+              <p className="contact_text">Give us a call</p>
+-+              <p className="contact_text">+1 (555) 123-4567</p>
+-             </div>
+--            <div className='contact__office'>
+-+            <div className="contact__office">
+-               <div className="contact__office_head">
+-                 <BsGeoAlt className="contact__card_img" aria-label="Office" />
+--                <h3 className='contact_type'>Office</h3>
+--                <p className='contact_text'>123 Main St, Anytown, USA</p>
+-+                <h3 className="contact_type">Office</h3>
+-+                <p className="contact_text">123 Main St, Anytown, USA</p>
+-               </div>
+-               <div className="contact__office_btn">
+--                <button className='contact_btn' aria-label="Get Directions">Get Directions <span>{'>'}</span></button>
+-+                <button className="contact_btn" aria-label="Get Directions">
+-+                  Get Directions <span>{">"}</span>
+-+                </button>
+-               </div>
+-             </div>
+-           </div>
+--          <div className='contact__block'>
+--            <img className='contact_img' src='img/image7.jpg' alt='img' />
+-+          <div className="contact__block">
+-+            <img className="contact_img" src="img/image7.jpg" alt="img" />
+-           </div>
+-         </section>
+-       </main>
+--    <footer class="footer">
+--      <div class="footer__left">
+--        <h1 class="footer_head">Logo</h1>
+--        <h1 class="footer_bottom">Stay up to date on the latest features and releases by joining our newsletter.</h1>
+-+      <footer class="footer">
+-+        <div class="footer__left">
+-+          <h1 class="footer_head">Logo</h1>
+-+          <h1 class="footer_bottom">
+-+            Stay up to date on the latest features and releases by joining our
+-+            newsletter.
+-+          </h1>
+-           <div class="footer__nav">
+--            <input type="email" name="email" id="email" class="" value="Your email" aria-label="email" />
+--            <button type="submit" value="Subscribe" class="">Subscribe</button>
+-+            {/* Создай компонент где будет тег form и внутри него будет input и button (можно переиспользовать прошлый компонент) */}
+-+            <input
+-+              type="email"
+-+              name="email"
+-+              id="email"
+-+              class=""
+-+              value="Your email"
+-+              aria-label="email"
+-+            />
+-+            <button type="submit" value="Subscribe" class="">
+-+              Subscribe
+-+            </button>
+-           </div>
+--          <span class="">By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.</span>
+--      </div>
+--      <div class="footer__right">
+--        <ol class="footer__ol">
+--          <h2 class="column__title">Column one</h2>
+--          <li class="footer_li">Link one</li>
+--          <li class="footer_li">Link two</li>
+--          <li class="footer_li">Link three</li>
+--          <li class="footer_li">Link four</li>
+--          <li class="footer_li">Link five</li>
+--        </ol>
+--        <ol class="column column-two">
+--          <h2 class="column__title">Column two</h2>
+--          <li class="footer__link">Link one</li>
+--          <li class="footer__link">Link two</li>
+--          <li class="footer__link">Link three</li>
+--          <li class="footer__link">Link four</li>
+--          <li class="footer__link">Link five</li>
+--        </ol>
+--        <div class="column column-follow-us">
+--          <h2 class="column__title follow-us__title">Follow us</h2>
+-+          <span class="">
+-+            By subscribing, you agree to our Privacy Policy and consent to
+-+            receive updates from our company.
+-+          </span>
+-+        </div>
+-+        <div class="footer__right">
+-+          {/* почему ol? лучше использовать ul и li для списка */}
+-+          <ol class="footer__ol">
+-+            <h2 class="column__title">Column one</h2>
+-+            <li class="footer_li">Link one</li>
+-+            <li class="footer_li">Link two</li>
+-+            <li class="footer_li">Link three</li>
+-+            <li class="footer_li">Link four</li>
+-+            <li class="footer_li">Link five</li>
+-+          </ol>
+-+          <ol class="column column-two">
+-+            <h2 class="column__title">Column two</h2>
+-+            <li class="footer__link">Link one</li>
+-+            <li class="footer__link">Link two</li>
+-+            <li class="footer__link">Link three</li>
+-+            <li class="footer__link">Link four</li>
+-+            <li class="footer__link">Link five</li>
+-+          </ol>
+-+          <div class="column column-follow-us">
+-+            <h2 class="column__title follow-us__title">Follow us</h2>
+-             <div class="follow-us__block">
+-               <div class="footer__link">
+-                 <CiFacebook />
+-@@ -316,7 +404,7 @@ function App() {
+-               </div>
+-             </div>
+-             <div class="follow-us__block">
+--              <div  class="footer__link">
+-+              <div class="footer__link">
+-                 <CiLinkedin />
+-                 <span class="follow-us__text">Linkedin</span>
+-               </div>
+-@@ -334,4 +422,5 @@ function App() {
+-   );
+- }
+- 
+-+// не экспортируй по дефолту, экспортируй по имени App
+- export default App;
+-diff --git a/src/index.js b/src/index.js
+-index d563c0f..699f859 100644
+---- a/src/index.js
+-+++ b/src/index.js
+-@@ -4,6 +4,7 @@ import './index.css';
+- import App from './App';
+- import reportWebVitals from './reportWebVitals';
+- 
+-+// не создавай приложение через create react app, создавай приложение через create vite
+- const root = ReactDOM.createRoot(document.getElementById('root'));
+- root.render(
+-   <React.StrictMode>
+diff --git a/package-lock.json b/package-lock.json
+index 99abec3..a13fc1f 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -65,7 +65,6 @@
+       "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.28.5.tgz",
+       "integrity": "sha512-e7jT4DxYvIDLk1ZHmU/m/mB19rex9sv0c2ftBtjSBv+kVM/902eh0fINUzD7UwLLNR+jU585GxUJ8/EBfAM5fw==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "@babel/code-frame": "^7.27.1",
+         "@babel/generator": "^7.28.5",
+@@ -715,7 +714,6 @@
+       "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-flow/-/plugin-syntax-flow-7.27.1.tgz",
+       "integrity": "sha512-p9OkPbZ5G7UT1MofwYFigGebnrzGJacoBSQM0/6bi/PUMVE+qlWDD/OalvQKbwgQzU6dl0xAv6r4X7Jme0RYxA==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "@babel/helper-plugin-utils": "^7.27.1"
+       },
+@@ -1599,7 +1597,6 @@
+       "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.27.1.tgz",
+       "integrity": "sha512-2KH4LWGSrJIkVf5tSiBFYuXDAoWRq2MMwgivCf+93dd0GQi8RXLjKA/0EvRnVV5G0hrHczsquXuD01L8s6dmBw==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "@babel/helper-annotate-as-pure": "^7.27.1",
+         "@babel/helper-module-imports": "^7.27.1",
+@@ -3429,7 +3426,6 @@
+       "resolved": "https://registry.npmjs.org/@testing-library/dom/-/dom-10.4.1.tgz",
+       "integrity": "sha512-o4PXJQidqJl82ckFaXUeoAW+XysPLauYI43Abki5hABd853iMhitooc6znOnczgbTYmEP6U6/y1ZyKAIsvMKGg==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "@babel/code-frame": "^7.10.4",
+         "@babel/runtime": "^7.12.5",
+@@ -3916,7 +3912,6 @@
+       "resolved": "https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.62.0.tgz",
+       "integrity": "sha512-TiZzBSJja/LbhNPvk6yc0JrX9XqhQ0hdh6M2svYfsHGejaKFIAGd9MQ+ERIMzLGlN/kZoYIgdxFV0PuljTKXag==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "@eslint-community/regexpp": "^4.4.0",
+         "@typescript-eslint/scope-manager": "5.62.0",
+@@ -3970,7 +3965,6 @@
+       "resolved": "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-5.62.0.tgz",
+       "integrity": "sha512-VlJEV0fOQ7BExOsHYAGrgbEiZoi8D+Bl2+f6V2RrXerRSylnp+ZBHmPvaIa8cz0Ajx7WO7Z5RqfgYg7ED1nRhA==",
+       "license": "BSD-2-Clause",
+-      "peer": true,
+       "dependencies": {
+         "@typescript-eslint/scope-manager": "5.62.0",
+         "@typescript-eslint/types": "5.62.0",
+@@ -4340,7 +4334,6 @@
+       "resolved": "https://registry.npmjs.org/acorn/-/acorn-8.15.0.tgz",
+       "integrity": "sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==",
+       "license": "MIT",
+-      "peer": true,
+       "bin": {
+         "acorn": "bin/acorn"
+       },
+@@ -4439,7 +4432,6 @@
+       "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz",
+       "integrity": "sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "fast-deep-equal": "^3.1.1",
+         "fast-json-stable-stringify": "^2.0.0",
+@@ -5350,7 +5342,6 @@
+         }
+       ],
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "baseline-browser-mapping": "^2.8.25",
+         "caniuse-lite": "^1.0.30001754",
+@@ -7190,7 +7181,6 @@
+       "integrity": "sha512-ypowyDxpVSYpkXr9WPv2PAZCtNip1Mv5KTW0SCurXv/9iOpcrH9PaqUElksqEB6pChqHGDRCFTyrZlGhnLNGiA==",
+       "deprecated": "This version is no longer supported. Please see https://eslint.org/version-support for other options.",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "@eslint-community/eslint-utils": "^4.2.0",
+         "@eslint-community/regexpp": "^4.6.1",
+@@ -9967,7 +9957,6 @@
+       "resolved": "https://registry.npmjs.org/jest/-/jest-27.5.1.tgz",
+       "integrity": "sha512-Yn0mADZB89zTtjkPJEXwrac3LHudkQMR+Paqa8uxJHCBr9agxztUifWCyiYrjhMPBoUVBjyny0I7XH6ozDr7QQ==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "@jest/core": "^27.5.1",
+         "import-local": "^3.0.2",
+@@ -10865,7 +10854,6 @@
+       "resolved": "https://registry.npmjs.org/jiti/-/jiti-1.21.7.tgz",
+       "integrity": "sha512-/imKNG4EbWNrVjoNC/1H5/9GFy+tqjGBHCaSsN+P2RnPqjsLmv6UD3Ej+Kj8nBWaRAwyk7kK5ZUc+OEatnTR3A==",
+       "license": "MIT",
+-      "peer": true,
+       "bin": {
+         "jiti": "bin/jiti.js"
+       }
+@@ -12249,7 +12237,6 @@
+         }
+       ],
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "nanoid": "^3.3.11",
+         "picocolors": "^1.1.1",
+@@ -13384,7 +13371,6 @@
+       "resolved": "https://registry.npmjs.org/postcss-selector-parser/-/postcss-selector-parser-6.1.2.tgz",
+       "integrity": "sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "cssesc": "^3.0.0",
+         "util-deprecate": "^1.0.2"
+@@ -13744,7 +13730,6 @@
+       "resolved": "https://registry.npmjs.org/react/-/react-19.2.0.tgz",
+       "integrity": "sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==",
+       "license": "MIT",
+-      "peer": true,
+       "engines": {
+         "node": ">=0.10.0"
+       }
+@@ -13876,7 +13861,6 @@
+       "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.2.0.tgz",
+       "integrity": "sha512-UlbRu4cAiGaIewkPyiRGJk0imDN2T3JjieT6spoL2UeSf5od4n5LB/mQ4ejmxhCFT1tYe8IvaFulzynWovsEFQ==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "scheduler": "^0.27.0"
+       },
+@@ -13910,7 +13894,6 @@
+       "resolved": "https://registry.npmjs.org/react-refresh/-/react-refresh-0.11.0.tgz",
+       "integrity": "sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==",
+       "license": "MIT",
+-      "peer": true,
+       "engines": {
+         "node": ">=0.10.0"
+       }
+@@ -14357,7 +14340,6 @@
+       "resolved": "https://registry.npmjs.org/rollup/-/rollup-2.79.2.tgz",
+       "integrity": "sha512-fS6iqSPZDs3dr/y7Od6y5nha8dW1YnbgtsyotCVvoFGKbERG++CVRFv1meyGDE1SNItQA8BrnCw7ScdAhRJ3XQ==",
+       "license": "MIT",
+-      "peer": true,
+       "bin": {
+         "rollup": "dist/bin/rollup"
+       },
+@@ -14600,7 +14582,6 @@
+       "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz",
+       "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "fast-deep-equal": "^3.1.3",
+         "fast-uri": "^3.0.1",
+@@ -15934,6 +15915,23 @@
+         }
+       }
+     },
++    "node_modules/tailwindcss/node_modules/yaml": {
++      "version": "2.8.2",
++      "resolved": "https://registry.npmjs.org/yaml/-/yaml-2.8.2.tgz",
++      "integrity": "sha512-mplynKqc1C2hTVYxd0PU2xQAc22TI1vShAYGksCCfxbn/dFwnHTNi1bvYsBTkhdUNtGIf5xNOg938rrSSYvS9A==",
++      "license": "ISC",
++      "optional": true,
++      "peer": true,
++      "bin": {
++        "yaml": "bin.mjs"
++      },
++      "engines": {
++        "node": ">= 14.6"
++      },
++      "funding": {
++        "url": "https://github.com/sponsors/eemeli"
++      }
++    },
+     "node_modules/tapable": {
+       "version": "2.3.0",
+       "resolved": "https://registry.npmjs.org/tapable/-/tapable-2.3.0.tgz",
+@@ -16274,7 +16272,6 @@
+       "resolved": "https://registry.npmjs.org/type-fest/-/type-fest-0.20.2.tgz",
+       "integrity": "sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==",
+       "license": "(MIT OR CC0-1.0)",
+-      "peer": true,
+       "engines": {
+         "node": ">=10"
+       },
+@@ -16704,7 +16701,6 @@
+       "resolved": "https://registry.npmjs.org/webpack/-/webpack-5.103.0.tgz",
+       "integrity": "sha512-HU1JOuV1OavsZ+mfigY0j8d1TgQgbZ6M+J75zDkpEAwYeXjWSqrGJtgnPblJjd/mAyTNQ7ygw0MiKOn6etz8yw==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "@types/eslint-scope": "^3.7.7",
+         "@types/estree": "^1.0.8",
+@@ -16776,7 +16772,6 @@
+       "resolved": "https://registry.npmjs.org/webpack-dev-server/-/webpack-dev-server-4.15.2.tgz",
+       "integrity": "sha512-0XavAZbNJ5sDrCbkpWL8mia0o5WPOd2YGtxrEiZkBK9FjLppIUK2TgxK6qGD2P3hUXTJNNPVibrerKcx5WkR1g==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "@types/bonjour": "^3.5.9",
+         "@types/connect-history-api-fallback": "^1.3.5",
+@@ -17189,7 +17184,6 @@
+       "resolved": "https://registry.npmjs.org/ajv/-/ajv-8.17.1.tgz",
+       "integrity": "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==",
+       "license": "MIT",
+-      "peer": true,
+       "dependencies": {
+         "fast-deep-equal": "^3.1.3",
+         "fast-uri": "^3.0.1",
+diff --git a/src/components/FooterList/FooterList.jsx b/src/components/FooterList/FooterList.jsx
+index 2640192..c201831 100644
+--- a/src/components/FooterList/FooterList.jsx
++++ b/src/components/FooterList/FooterList.jsx
+@@ -5,6 +5,8 @@ export const FooterList = ({title, items}) => {
+         <ul className={style.ul}>
+             <h2 className={style.title}>{title}</h2>
+             {items.map((item, index) => (
++                // Where is links?
++                // Do not use index as key
+                 <li key={index} className={style.li}>{item}</li>
+             ))}
+           </ul>
+diff --git a/src/components/FooterMedia/FooterMedia.jsx b/src/components/FooterMedia/FooterMedia.jsx
+index bad1b78..00cdd62 100644
+--- a/src/components/FooterMedia/FooterMedia.jsx
++++ b/src/components/FooterMedia/FooterMedia.jsx
+@@ -5,8 +5,10 @@ export const FooterMedia = ({platforms}) => {
+       <ul className={style.ul}>
+         <h2 className={style.title}>Follow us</h2>
+         {platforms.map(({ icon: Icon, name }, index) => (
++          // Do not use index as key
+             <li key={index} className={style.li}>
+                 <Icon className={style.icon} />
++                {/* it's a link */}
+                 {name}
+             </li>
+         ))}
+diff --git a/src/modules/header/Header.jsx b/src/modules/header/Header.jsx
+index 6dd7121..edaef6e 100644
+--- a/src/modules/header/Header.jsx
++++ b/src/modules/header/Header.jsx
+@@ -1,38 +1,61 @@
+ import { useState } from "react";
+-import { Button } from "../../components/Button/Button"
+-import { HeaderButton } from "../../components/HeaderButton/HeaderButton"
+-import './Header.css';
++import { Button } from "../../components/Button/Button";
++import { HeaderButton } from "../../components/HeaderButton/HeaderButton";
++import "./Header.css";
+ 
+-export const Header =  () => {
++const headerItems = [
++  {
++    label: "Discover LifeBlend",
++  },
++  {
++    label: "Explore",
++  },
++  {
++    label: "Inspiration",
++  },
++  {
++    label: "Contact us",
++  },
++];
++
++export const Header = () => {
+   const [isVisible, setIsVisible] = useState(false);
+ 
+-    return (
+-      <>
+-        <div className="header_hidden">
+-          <div className="header_txt">Lifestyle</div>
+-          <button className="header_btn" onClick={() => setIsVisible(!isVisible)}>&#8942;</button>
+-        </div>
+-        <header  className={`header ${isVisible ? 'header--active' : ''}`}>
+-          <ul className="header__left">
+-            <li>
+-              <HeaderButton label='Discover LifeBlend' />
+-            </li>
+-            <li>
+-              <HeaderButton label='Explore' />
+-            </li>
+-            <li>
+-              <HeaderButton label='Inspiration' />
+-            </li>
+-            <li>
+-              <HeaderButton label='Contact us' />
+-            </li>
+-          </ul>
+-          <ul className="header__right">
+-            <li>
+-              <Button label='Contact us' variant="primary" />
++  return (
++    <>
++      <div className="header_hidden">
++        <div className="header_txt">Lifestyle</div>
++        <button className="header_btn" onClick={() => setIsVisible(!isVisible)}>
++          &#8942;
++        </button>
++      </div>
++
++      <header className={`header ${isVisible ? "header--active" : ""}`}>
++        <ul className="header__left">
++          {headerItems.map((item) => (
++            <li key={item.label}>
++              <HeaderButton label={item.label} />
+             </li>
+-          </ul>
++          ))}
++          {/* <li>
++            <HeaderButton label="Discover LifeBlend" />
++          </li>
++          <li>
++            <HeaderButton label="Explore" />
++          </li>
++          <li>
++            <HeaderButton label="Inspiration" />
++          </li>
++          <li>
++            <HeaderButton label="Contact us" />
++          </li> */}
++        </ul>
++        <ul className="header__right">
++          <li>
++            <Button label="Contact us" variant="primary" />
++          </li>
++        </ul>
+       </header>
+-      </>
+-    )
+-}
+\ No newline at end of file
++    </>
++  );
++};
+diff --git a/src/modules/main/3hub/Hub.jsx b/src/modules/main/3hub/Hub.jsx
+index 57f0c5e..d435202 100644
+--- a/src/modules/main/3hub/Hub.jsx
++++ b/src/modules/main/3hub/Hub.jsx
+@@ -4,6 +4,27 @@ import { InfoCard } from '../../../components/InfoCard/InfoCard'
+ import { InfoSection } from '../../../components/InfoSection/InfoSection'
+ import '../3hub/Hub.css'
+ 
++const hubItems = [
++  {
++    title: 'Health and Wellness',
++    description: 'Discover expert advice and tips on maintaining a healthy lifestyle.',
++    imageSrc: 'img/img3-1.jpg',
++    altText: 'TreadMill',
++  },
++  {
++    title: 'Boost Your Productivity',
++    description: 'Learn effective strategies to maximize your productivity and achieve your goals.',
++    imageSrc: 'img/img3-2.jpg',
++    altText: 'Basketball',
++  },
++  {
++    title: 'Find Joy in Leisure',
++    description: 'Discover exciting activities and hobbies to make the most of your leisure time.',
++    imageSrc: 'img/img3-3.jpg',
++    altText: 'Field',
++  },
++]
++
+ export const Hub = () => {
+     return (
+         <section className="hub">
+@@ -13,7 +34,16 @@ export const Hub = () => {
+           description='LifeBlend Hub is your one-stop destination for all things related to health, productivity, leisure, and personal growth. Explore our comprehensive blend of content and resources to enhance and inspire every facet of your lifestyle.'
+           variant='lg' />
+           <div className="hub__cards">
+-            <InfoCard
++            {hubItems.map((item) => (
++              <InfoCard
++              key={item.title}
++              imageSrc={item.imageSrc}
++              altText={item.altText}
++              title={item.title}
++              description={item.description}
++            />
++            ))}
++            {/* <InfoCard
+             imageSrc='img/img3-1.jpg'
+             altText='TreadMill'
+             title='Health and Wellness'
+@@ -30,7 +60,7 @@ export const Hub = () => {
+             altText='Field'
+             title='Find Joy in Leisure'
+             description='Discover exciting activities and hobbies to make the most of your leisure time.'
+-            />
++            /> */}
+           </div>
+           <div className="hub_btns">
+             <Button label='Join'/>
+diff --git a/src/modules/main/5benefits/Benefits.jsx b/src/modules/main/5benefits/Benefits.jsx
+index 6707aaa..5d9aa47 100644
+--- a/src/modules/main/5benefits/Benefits.jsx
++++ b/src/modules/main/5benefits/Benefits.jsx
+@@ -1,14 +1,51 @@
+-import { InfoCard } from '../../../components/InfoCard/InfoCard'
+-import './Benefits.css'
++import { InfoCard } from "../../../components/InfoCard/InfoCard";
++import "./Benefits.css";
++
++const benefitsItems = [
++  {
++    title: `Unlock Your Full Potential with LifeBlend Hub's Comprehensive Content`,
++    description:
++      "Engage with our curated content and resources to enhance every aspect of your lifestyle.",
++    imageSrc: "img/img5-1.jpg",
++    altText: "Relax",
++    buttonLabel: "Explore",
++  },
++  {
++    title: `Stay Informed and Inspired with LifeBlend Hub's Diverse Content Content`,
++    description:
++      "Access our extensive collection of articles, videos, and guides to enrich your daily life.",
++    imageSrc: "img/img5-3.jpg",
++    altText: "Football",
++    buttonLabel: "Discover",
++  },
++  {
++    title: `Transform Your Lifestyle with LifeBlend Hub's Expertly Curated Resources`,
++    description:
++      "Find the tools and resources you need to achieve your goals and live your best life.",
++    imageSrc: "img/img5-3.jpg",
++    altText: "Football",
++    buttonLabel: "Get Started",
++  },
++];
+ 
+ export const Benefits = () => {
+-    return (
+-        <section className="benefits">
+-          <h2 className="benefits__header">
+-            Discover a World of Inspiration and Resources on LifeBlend Hub
+-          </h2>
+-          <div className="benefits__cards">
+-            <InfoCard 
++  return (
++    <section className="benefits">
++      <h2 className="benefits__header">
++        Discover a World of Inspiration and Resources on LifeBlend Hub
++      </h2>
++      <div className="benefits__cards">
++        {benefitsItems.map((item) => (
++          <InfoCard
++            key={item.title}
++            imageSrc={item.imageSrc}
++            altText={item.altText}
++            title={item.title}
++            description={item.description}
++            buttonLabel={item.buttonLabel}
++          />
++        ))}
++        {/* <InfoCard 
+             imageSrc='img/img5-1.jpg'
+             altText='Runners'
+             title="Unlock Your Full Potential with LifeBlend Hub's Comprehensive Content"
+@@ -25,8 +62,8 @@ export const Benefits = () => {
+             altText='Football'
+             title="Transform Your Lifestyle with LifeBlend Hub's Expertly Curated Resources"
+             description="Find the tools and resources you need to achieve your goals and live your best life."
+-            buttonLabel='Get Started' />
+-          </div>
+-        </section>
+-    )
+-}
+\ No newline at end of file
++            buttonLabel='Get Started' /> */}
++      </div>
++    </section>
++  );
++};

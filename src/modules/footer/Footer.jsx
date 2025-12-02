@@ -10,10 +10,10 @@ import './Footer.css'
 
 export const Footer = () => {
   const socialPlatforms = [
-    { name: 'Facebook', icon: CiFacebook },
-    { name: 'Instagram', icon: FaInstagram },
-    { name: 'Linkedin', icon: CiLinkedin },
-    { name: 'Youtube', icon: FaYoutube },
+    {id: 1, name: 'Facebook', icon: CiFacebook, href: 'https://facebook.com' },
+    {id: 2, name: 'Instagram', icon: FaInstagram, href: 'https://Instagram.com' },
+    {id: 3, name: 'Linkedin', icon: CiLinkedin, href: 'https://Linkedin.com' },
+    {id: 4, name: 'Youtube', icon: FaYoutube, href: 'https://Youtube.com' },
   ];
     return (
         <footer className="footer">
@@ -31,10 +31,10 @@ export const Footer = () => {
         <div className="footer__right">
           <FooterList 
           title="Column one"
-          items={['Link one', 'Link two', 'Link three', 'Link four', 'Link five']} />
+          items={[{label: 'Link one', href: '/'}, {label: 'Link two', href: '/'}, {label: 'Link three', href: '/'}, {label: 'Link four', href: '/'}, {label: 'Link five', href: '/'}]} />
           <FooterList 
           title="Column two"
-          items={['Link one', 'Link two', 'Link three', 'Link four', 'Link five']} />
+          items={[{label: 'Link one', href: '/'}, {label: 'Link two', href: '/'}, {label: 'Link three', href: '/'}, {label: 'Link four', href: '/'}, {label: 'Link five', href: '/'}]} />
           <FooterMedia 
           platforms={socialPlatforms} />
         </div>

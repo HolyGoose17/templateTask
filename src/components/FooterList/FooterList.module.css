@@ -18,6 +18,12 @@
   font-weight: 400;
   line-height: 160%;
 }
+
+.link{
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
 @media (min-width:0) and (max-width:1024px) {
   .ul{
     align-items: center;

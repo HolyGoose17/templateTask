@@ -63,12 +63,17 @@
   box-sizing: border-box;
 }
 .wrapper {
-  max-width: 90rem;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .main{
   max-width: 100%;
 }
-
+@media (min-width:0) and (max-width:1440px) {
+  .wrapper {
+    margin: 0 auto;
+  }
+}
 
 
 
